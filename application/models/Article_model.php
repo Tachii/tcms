@@ -30,9 +30,5 @@
 			$query = $this->db->get();
 			return $query->result();
 		}
-		
-		public function test(){
-			echo 'test';
-		}
 	}
 ?>

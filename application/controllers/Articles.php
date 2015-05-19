@@ -19,9 +19,7 @@ class Articles extends TCMS_Controller {
 	 
 	public function index()
 	{
-		$this->load->database();
 		//Get Articles
-		//$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
-		$test = $this->Article_model->test();
+		$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
 	}
 }
