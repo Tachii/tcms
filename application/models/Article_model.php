@@ -7,6 +7,14 @@
                 parent::__construct();
         }
 		
+		/**
+		 * Get Articles
+		 * 
+		 * @param - order_by(string)
+		 * @param - sort(string)
+		 * @param - limit(int)
+		 * @param - offset(int)
+		 */
 		public function get_articles($order_by = null, $sort='DESC', $limit = null, $offset = 0)
 		{
 			$this->db->select('a.*,b.name as category_name, c.first_name, c.last_name');
