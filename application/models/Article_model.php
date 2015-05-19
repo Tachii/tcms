@@ -53,7 +53,7 @@
 		 * Get Single Article
 		 * @param id(int)
 		 */
-		public function get_article($id){
+		public function get_single_article($id){
 			$this->db->where('id',$id);
 			$query = $this->db->get('articles');
 			$article = $query->row();
