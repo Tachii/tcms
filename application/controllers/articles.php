@@ -1,7 +1,7 @@
 <?php
-class Articles extends CI_Controller{
+class Articles extends TCMS_Controller{
 	public function index(){
-		echo 'test';//
+		echo 'test1';
 	}
 }
 ?>
