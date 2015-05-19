@@ -10,5 +10,7 @@
                 // Call the CI_Model constructor
                 parent::__construct();
         }
+		
+		public function
 	}
 ?>
