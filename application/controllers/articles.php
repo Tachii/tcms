@@ -4,3 +4,4 @@ class Articles extends CI_Controller{
 		echo 'test';
 	}
 }
+?>
