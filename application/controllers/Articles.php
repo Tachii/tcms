@@ -21,5 +21,6 @@ class Articles extends TCMS_Controller {
 	{
 		//Get Articles
 		$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
+		var_dump($data);
 	}
 }
