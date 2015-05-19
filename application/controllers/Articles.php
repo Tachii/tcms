@@ -22,6 +22,9 @@ class Articles extends TCMS_Controller {
 		//Get Articles
 		$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
 		
+		//Get Navbar Items
+		$data['navbar_items'] = $this->Article_model->get_navbar_items();
+		
 		//Load View
 		$this->load->view('home',$data);
 	}

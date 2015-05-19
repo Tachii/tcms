@@ -14,10 +14,10 @@
 		 * @param - sort(string)
 		 * @param - limit(int)
 		 * @param - offset(int)
+		 * 
 		 */
 		public function get_articles($order_by = null, $sort='DESC', $limit = null, $offset = 0)
 		{
-			
 			$this->db->from('articles AS article');
 			$this->db->select('article.*,category.name as category_name, user.first_name, user.last_name');
 			$this->db->join('categories AS category', 'category.id = article.category_id','left');
@@ -35,7 +35,20 @@
 			$query = $this->db->get();
 			$result = $query->result();
 			return $result;
-		
 		}
+		
+		/**
+		 * Get Navbar Items
+		 */
+		public function get_navbar_items()
+		{
+			$this->db->where('in_navbar',1);
+			$this->db->order_by('order');
+			$query=$this->db->get('articles'); 
+			$result = $query->result();
+			return $result;
+		}
+		
+		
 	}
 ?>
