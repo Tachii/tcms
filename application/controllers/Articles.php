@@ -16,9 +16,12 @@ class Articles extends TCMS_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	 
 	public function index()
 	{
+		$this->load->database();
 		//Get Articles
-		$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
+		//$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
+		$test = $this->Article_model->test();
 	}
 }
