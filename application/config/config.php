@@ -29,7 +29,7 @@ $config['base_url'] = 'tcms.herokuapp.com';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
