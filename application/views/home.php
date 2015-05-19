@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Welcome | </title>
+    <title>Welcome | <?php echo $this->global_data['site_title']; ?> </title>
+    
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
@@ -70,5 +70,3 @@
     </div> <!-- /container -->
   </body>
 </html>
-
-			

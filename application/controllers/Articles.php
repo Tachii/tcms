@@ -28,4 +28,20 @@ class Articles extends TCMS_Controller {
 		//Load View
 		$this->load->view('home',$data);
 	}
+	
+	
+	/**
+	 * Load single article view
+	 * @param id(int) 
+	 */
+	public function view($id){
+		//Get Navbar Items
+		$data['navbar_items'] = $this->Article_model->get_navbar_items();
+		
+		//Get Single Article
+		$data['article'] = $this->Article_model->get_single_article($id);
+		
+		//Load View
+		$this->load->view('inner',$data);
+	}
 }

@@ -33,8 +33,8 @@
 			}
 			
 			$query = $this->db->get();
-			$result = $query->result();
-			return $result;
+			$articles = $query->result();
+			return $articles;
 		}
 		
 		/**
@@ -45,8 +45,19 @@
 			$this->db->where('in_navbar',1);
 			$this->db->order_by('order');
 			$query=$this->db->get('articles'); 
-			$result = $query->result();
-			return $result;
+			$navbar_items = $query->result();
+			return $navbar_items;
+		}
+		
+		/**
+		 * Get Single Article
+		 * @param id(int)
+		 */
+		public function get_article($id){
+			$this->db->where('id',$id);
+			$query = $this->db->get('articles');
+			$article = $query->row();
+			return $article;
 		}
 		
 		
