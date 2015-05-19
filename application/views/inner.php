@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,5 +48,3 @@
     </div> <!-- /container -->
   </body>
 </html>
-
-			
