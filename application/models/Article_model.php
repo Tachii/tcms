@@ -9,7 +9,7 @@
 		
 		public function get_articles()
 		{
-			
+			echo 'test';
 		}
 	}
 ?>
