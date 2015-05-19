@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Articles extends CI_Controller {
+class Articles extends TCMS_Controller {
 	/**
 	 * Index Page for this controller.
 	 *
@@ -19,6 +19,6 @@ class Articles extends CI_Controller {
 	public function index()
 	{
 		//Get Articles
-		$data['articles'] = $this->Article_model->get_articles();
+		$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
 	}
 }
