@@ -1,5 +1,5 @@
 <?php
-class Articles extends TCMS_Controller{
+class Articles extend TCMS_Controller{
 	public function index(){
 		echo 'test';
 	}
