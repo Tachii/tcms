@@ -11,6 +11,9 @@
                 parent::__construct();
         }
 		
-		public function
+		public function get_articles()
+		{
+			
+		}
 	}
 ?>
