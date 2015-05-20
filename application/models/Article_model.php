@@ -39,8 +39,26 @@
 		
 		/**
 		 * Get Categories
-		 * @param 
+		 * 
+		 * @param - order_by(string)
+		 * @param - sort(string)
+		 * @param - limit(int)
+		 * @param - offset(int)
+		 * 
 		 */
+		public function get_categories($order_by = null, $sort='DESC', $limit = null, $offset = 0)
+		{
+			$this->db->select('*');
+			$this->db->from('categories');
+			if($limit != null){
+				$this->db->limit($limit,$offset);
+			}
+			if($order_by != null){
+				$this->db->order_by($order_by,$offset);
+			}
+			$query = $this->db->get();
+			return $query->result();
+		}
 		
 		/**
 		 * Get Navbar Items
