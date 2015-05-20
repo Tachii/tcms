@@ -22,7 +22,7 @@
 			if($limit != null){
 				$this->db->limit($limit, $offset);
 			}
-			if($order != null){
+			if($order_by != null){
 				$this->db->order_by($order_by, $offset);
 			}
 			
