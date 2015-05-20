@@ -1,3 +1,5 @@
 <?php
-    phpinfo();
-?>
+
+class Dashboard extends TCMS_Controller{
+	
+}
