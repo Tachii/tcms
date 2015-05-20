@@ -4,8 +4,14 @@ body {
   padding-bottom: 20px;
 }
 
+
 li{
 	list-style: none;
+}
+
+
+.home-content{
+	padding-right:20px;	
 }
 
 .logo{
