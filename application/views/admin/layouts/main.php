@@ -64,12 +64,11 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="<?php echo base_url(); ?>">Overview</a></li>
-            <li><a href="articles.html">Articles</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="users.html">Users</a></li>
-            <li><a href="user_groups.html">User Groups</a></li>
-            <li><a href="settings.html">Settings</a></li>
+            <li><a href="<?php echo base_url(); ?>">Overview</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/articles">Articles</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/categories.html">Categories</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/users">Users</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/settings">Settings</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
