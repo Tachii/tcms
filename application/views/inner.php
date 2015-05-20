@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Welcome | </title>
+    <title>Welcome | <?php echo $this->global_data['site_title']; ?> </title>
+    
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
@@ -24,27 +25,32 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
+            <li role="presentation" ><a href="<?php echo base_url();?>">Home</a></li>
+			<?php foreach($navbar_items as $item): ?>
+            	<li role="presentation"><a href="<?php echo base_url();?>articles/view/<?php echo $item->id;?>"><?php echo $item->title; ?></a></li>
+          	<?php endforeach ; ?>
           </ul>
         </nav>
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted"><?php echo $this->global_data['site_title']; ?></h3>
       </div>
 
-		<div class="row">
-			<div class="col-lg-12">
-				<h1>
-					<?php echo $article->title;?>
-				</h1>
-				<?php echo $article->body;?>
-			</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>
+				<?php echo $article->title;?>
+			</h1>
+			<?php echo $article->body;?>
 		</div>
-      
+	</div>
+
       <footer class="footer">
-        <p>&copy; Company 2014</p>
+        <p>&copy; Gleb Zaveruha 2015</p>
       </footer>
 
     </div> <!-- /container -->
   </body>
 </html>
+
+
+
+
