@@ -24,16 +24,17 @@
     <div class="container">
       <div class="header clearfix">
         <nav>
-          <ul class="nav nav-pills pull-right">
+          <ul class="nav nav-pills pull-right navbar">
             <li role="presentation" ><a href="<?php echo base_url();?>">Home</a></li>
 			<?php foreach($navbar_items as $item): ?>
             	<li role="presentation"><a href="<?php echo base_url();?>articles/view/<?php echo $item->id;?>"><?php echo $item->title; ?></a></li>
           	<?php endforeach ; ?>
           </ul>
         </nav>
-        <h3 class="text-muted"><?php echo $this->global_data['site_title']; ?></h3>
+        <h3 class="text-muted"><img class="logo" src="<?php echo base_url() ?>assets/img/<?php echo $this->global_data['logo']; ?>" /></h3>
       </div>
-
+      
+      
 	<div class="row">
 		<div class="col-lg-12">
 			<h1>
@@ -43,6 +44,7 @@
 		</div>
 	</div>
 
+
       <footer class="footer">
         <p>&copy; Gleb Zaveruha 2015</p>
       </footer>
@@ -50,7 +52,3 @@
     </div> <!-- /container -->
   </body>
 </html>
-
-
-
-
