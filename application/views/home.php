@@ -48,8 +48,8 @@
 	      		</h4>
 	      		<p>
 	      			<?php echo word_limiter($article->body, 20); ?>
-	      			<a href="<?php echo base_url(); ?>articles/view/<?php echo $article->id; ?>">Read More</a>
       			</p>
+      			<a href="<?php echo base_url(); ?>articles/view/<?php echo $article->id; ?>">Read More</a>
 	      	</li>
       	<?php endforeach; ?>
       </ul>
