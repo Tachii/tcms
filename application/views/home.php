@@ -24,7 +24,7 @@
     <div class="container">
       <div class="header clearfix">
         <nav>
-          <ul class="nav nav-pills pull-right">
+          <ul class="nav nav-pills pull-right navbar">
             <li role="presentation" ><a href="<?php echo base_url();?>">Home</a></li>
 			<?php foreach($navbar_items as $item): ?>
             	<li role="presentation"><a href="<?php echo base_url();?>articles/view/<?php echo $item->id;?>"><?php echo $item->title; ?></a></li>
