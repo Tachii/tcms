@@ -12,6 +12,7 @@ class Dashboard extends TCMS_Controller{
 		$data['users'] = $this->User_model->get_users('id', 'DESC', 5);
 		
 		//View
+		$data['main_content'] = 'admin/dashboard/index';
 		$this->load->view('admin/layouts/main',$data);
 		
 	}
