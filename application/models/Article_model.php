@@ -38,6 +38,11 @@
 		}
 		
 		/**
+		 * Get Categories
+		 * @param 
+		 */
+		
+		/**
 		 * Get Navbar Items
 		 */
 		public function get_navbar_items()
