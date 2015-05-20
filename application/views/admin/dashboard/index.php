@@ -51,16 +51,6 @@
 		          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
 		          				</tr>
 	          				<?php endforeach ; ?>
-	          				<tr>
-	          					<td>1</td>
-	          					<td>sit</td>
-	          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
-	          				</tr>
-	          				<tr>
-	          					<td>1</td>
-	          					<td>sit</td>
-	          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
-	          				</tr>
 	          			</tbody>
           			</table>
           		</div>
