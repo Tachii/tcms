@@ -40,29 +40,17 @@
         <p><a class="btn btn-lg btn-success" href="#" role="button"><?php echo $this->global_data['jumbotron_button_text']; ?></a></p>
       </div>
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-      </div>
+      <ul class="home-content">
+      	<?php foreach($articles as $article): ?>
+	      	<li>
+	      		<h4>
+	      			<?php echo $article->title; ?>
+	      		</h4>
+	      		<?php echo word_limiter($article->body, 20); ?>
+	      		<p><a href="<?php echo base_url(); ?>articles/view/<?php echo $article->id; ?>">Read More</a></p>
+	      	</li>
+      	<?php endforeach; ?>
+      </ul>
 
       <footer class="footer">
         <p>&copy; Gleb Zaveruha 2015</p>
