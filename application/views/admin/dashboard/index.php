@@ -21,7 +21,11 @@
 	                  <td><?php echo $article->category_name;?></td>
 	                  <td><?php echo $article->username;?></td>
 	                  <td><?php echo $article->created;?></td>
-	                  <td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-warning">Unpublish</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
+	                  <td>
+	                  	<a href="<?php echo base_url();?>admin/articles/edit" class="btn btn-primary">Edit</a> 
+	                  	<a href="<?php echo base_url();?>admin/articles/unpublish" class="btn btn-warning">Unpublish</a> 
+	                  	<a href="<?php echo base_url();?>admin/articles/delete" class="btn btn-danger">Delete</a>
+                  	</td>
 	                </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -48,7 +52,10 @@
 		          				<tr>
 		          					<td><?php echo $category->id;?></td>
 		          					<td><?php echo $category->name;?></td>
-		          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
+		          					<td>
+		          						<a href="<?php echo base_url();?>admin/categories/edit" class="btn btn-primary">Edit</a> 
+	                  					<a href="<?php echo base_url();?>admin/categories/delete" class="btn btn-danger">Delete</a>
+		          					</td>
 		          				</tr>
 	          				<?php endforeach ; ?>
 	          			</tbody>
@@ -71,19 +78,12 @@
 	          			</thead>
 	          			<tbody>
 	          				<tr>
-	          					<td>1</td>
-	          					<td>sit</td>
-	          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
-	          				</tr>
-	          				<tr>
-	          					<td>1</td>
-	          					<td>sit</td>
-	          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
-	          				</tr>
-	          				<tr>
-	          					<td>1</td>
-	          					<td>sit</td>
-	          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
+	          					<td><?php echo $user->id; ?></td>
+	          					<td><?php echo $user->username;?></td>
+	          					<td>
+	          						<a href="<?php echo base_url();?>admin/users/edit" class="btn btn-primary">Edit</a> 
+                  					<a href="<?php echo base_url();?>admin/users/delete" class="btn btn-danger">Delete</a>
+	          					</td>
 	          				</tr>
 	          			</tbody>
           			</table>
