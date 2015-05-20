@@ -34,7 +34,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?php echo base_url(); ?>">Dashboard</a></li>
+            <li><a href="<?php echo base_url(); ?>">View Site</a></li>
+            <li><a href="<?php echo base_url(); ?>/admin/dashboard">Dashboard</a></li>
             <li><a href="<?php echo base_url(); ?>admin/users/logout">Logout</a></li>
           </ul>
           <form class="navbar-form navbar-right">
