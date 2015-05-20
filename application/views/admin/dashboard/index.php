@@ -44,11 +44,13 @@
 	          				</tr>
 	          			</thead>
 	          			<tbody>
-	          				<tr>
-	          					<td>1</td>
-	          					<td>sit</td>
-	          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
-	          				</tr>
+	          				<?php foreach($categories as $category): ?>
+		          				<tr>
+		          					<td><?php echo $category->id;?></td>
+		          					<td><?php echo $category->name;?></td>
+		          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
+		          				</tr>
+	          				<?php endforeach ; ?>
 	          				<tr>
 	          					<td>1</td>
 	          					<td>sit</td>
