@@ -19,7 +19,7 @@
 	                <tr>
 	                  <td><?php echo $article->title;?></td>
 	                  <td><?php echo $article->category_name;?></td>
-	                  <td><?php echo $article->_author;?></td>
+	                  <td><?php echo $article->username;?></td>
 	                  <td>dolor</td>
 	                  <td>sit</td>
 	                  <td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-warning">Unpublish</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
