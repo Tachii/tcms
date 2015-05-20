@@ -38,9 +38,23 @@
             <li><a href="<?php echo base_url(); ?>admin/dashboard">Dashboard</a></li>
             <li><a href="<?php echo base_url(); ?>admin/users/logout">Logout</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search Articles...">
-          </form>
+          
+		<!-- CodeIgniter Form Helper. Searchbox -->
+		<?php $atrributes = array('class' => 'navbar-form navbar-right'); ?>
+		<?php echo form_open('admin/articles/index', $atrributes); ?>
+			<?php 
+				$data = array(
+					'name' => 'keywords',
+					'class' => 'form-control',
+					'placeholder' => 'Search Articles'
+				);
+				
+				echo form_input($data);
+			?>
+		<?php echo form_close(); ?>
+		<!-- End of Form Helper -->
+			
+
         </div>
       </div>
     </nav>
