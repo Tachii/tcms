@@ -17,6 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url() ?>assets/css/jumbotron-narrow.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>assets/css/dashboard.css" rel="stylesheet">
+    
   </head>
 
   <body>
@@ -63,7 +64,7 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="index.html">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="<?php echo base_url(); ?>">Overview</a></li>
             <li><a href="articles.html">Articles</a></li>
             <li><a href="categories.html">Categories</a></li>
             <li><a href="users.html">Users</a></li>
