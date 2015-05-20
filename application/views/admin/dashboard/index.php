@@ -16,8 +16,8 @@
               <tbody>
               	<?php foreach($articles as $article) : ?>
 	                <tr>
-	                  <td>1,001</td>
-	                  <td>Lorem</td>
+	                  <td><?php echo $article->title;?></td>
+	                  <td><?php echo $article->category_name;?></td>
 	                  <td>ipsum</td>
 	                  <td>dolor</td>
 	                  <td>sit</td>
