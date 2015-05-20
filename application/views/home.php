@@ -31,13 +31,13 @@
           	<?php endforeach ; ?>
           </ul>
         </nav>
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted"><?php echo $this->global_data['site_title']; ?></h3>
       </div>
 
       <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <h1><?php echo $this->global_data['jumbotron_heading']; ?></h1>
+        <p class="lead"><?php echo $this->global_data['jumbotron_text']; ?></p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button"><?php echo $this->global_data['jumbotron_button_text']; ?></a></p>
       </div>
 
       <div class="row marketing">
@@ -65,7 +65,7 @@
       </div>
 
       <footer class="footer">
-        <p>&copy; Company 2014</p>
+        <p>&copy; Gleb Zaveruha 2015</p>
       </footer>
 
     </div> <!-- /container -->
