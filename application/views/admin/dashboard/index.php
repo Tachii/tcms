@@ -77,14 +77,16 @@
 	          				</tr>
 	          			</thead>
 	          			<tbody>
-	          				<tr>
-	          					<td><?php echo $user->id; ?></td>
-	          					<td><?php echo $user->username;?></td>
-	          					<td>
-	          						<a href="<?php echo base_url();?>admin/users/edit" class="btn btn-primary">Edit</a> 
-                  					<a href="<?php echo base_url();?>admin/users/delete" class="btn btn-danger">Delete</a>
-	          					</td>
-	          				</tr>
+	          				<?php foreach($users as $user): ?>
+		          				<tr>
+		          					<td><?php echo $user->id; ?></td>
+		          					<td><?php echo $user->username;?></td>
+		          					<td>
+		          						<a href="<?php echo base_url();?>admin/users/edit" class="btn btn-primary">Edit</a> 
+	                  					<a href="<?php echo base_url();?>admin/users/delete" class="btn btn-danger">Delete</a>
+		          					</td>
+		          				</tr>
+	          				<?php endforeach; ?>
 	          			</tbody>
           			</table>
           		</div>
