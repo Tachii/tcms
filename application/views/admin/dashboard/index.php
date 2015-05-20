@@ -1,8 +1,6 @@
           <h1 class="page-header">Dashboard</h1>
 
-          
-
-          <h2 class="sub-header">Section title</h2>
+          <h2 class="sub-header">Latest Articles</h2>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -16,18 +14,22 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                  <td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-warning">Unpublish</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
-                </tr>
+              	<?php foreach($articles as $article) : ?>
+	                <tr>
+	                  <td>1,001</td>
+	                  <td>Lorem</td>
+	                  <td>ipsum</td>
+	                  <td>dolor</td>
+	                  <td>sit</td>
+	                  <td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-warning">Unpublish</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
+	                </tr>
+                <?php endforeach; ?>
               </tbody>
             </table>
           </div>
+          
           <div class="row">
+          	
           	<div class="col-md-6">
           		<h3>
           			Latest Categories
@@ -61,6 +63,7 @@
           			</table>
           		</div>
           	</div>
+          	
           	<div class="col-md-6">
           		<h3>
           			Latest Users
@@ -94,4 +97,5 @@
           			</table>
           		</div>
           	</div>
+          	
           </div>
