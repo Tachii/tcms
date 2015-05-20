@@ -41,7 +41,7 @@
 				<?php echo $article->title;?>
 			</h1>
 			<?php echo $article->body;?>
-			<br />
+			<br /><br />
 		</div>
 	</div>
 
