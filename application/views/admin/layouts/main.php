@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>TCMS | Dashboard</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
@@ -34,7 +34,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
+            <li><a href="<?php echo base_url(); ?>">Dashboard</a></li>
             <li><a href="#">Logout</a></li>
           </ul>
           <form class="navbar-form navbar-right">
