@@ -47,6 +47,7 @@
 	      			<?php echo $article->title; ?>
 	      		</h4>
 	      		<?php echo word_limiter($article->body, 20); ?>
+	      		<br />
 	      		<p><a href="<?php echo base_url(); ?>articles/view/<?php echo $article->id; ?>">Read More</a></p>
 	      	</li>
       	<?php endforeach; ?>
