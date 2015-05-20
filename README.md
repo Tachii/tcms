@@ -1,6 +1,6 @@
 # TCMS
 
--!(http://tcms.herokuapp.com/assets/img/logo.png)
+![alt tag](http://tcms.herokuapp.com/assets/img/logo.png)
 
 Custom Content Management System
 
