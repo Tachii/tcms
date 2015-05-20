@@ -31,7 +31,7 @@
           	<?php endforeach ; ?>
           </ul>
         </nav>
-        <h3 class="text-muted"><img src="<?php echo base_url() ?>assets/img/<?php echo $this->global_data['logo']; ?>" /></h3>
+        <h3 class="text-muted"><img class="logo" src="<?php echo base_url() ?>assets/img/<?php echo $this->global_data['logo']; ?>" /></h3>
       </div>
 
       <div class="jumbotron">

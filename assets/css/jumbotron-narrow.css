@@ -8,6 +8,10 @@ li{
 	list-style: none;
 }
 
+.logo{
+	max-height:20%;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
