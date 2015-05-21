@@ -1,3 +1,5 @@
+<!-- Display Validation errors -->
+<?php echo validation_errors('<p class="alert alert-dismissable alert-danger">'); ?>
 <form>
 	<div class="row">	
 	  <div class="col-md-6">
@@ -6,12 +8,12 @@
 	</div>
 			<ol class="breadcrumb">
 				<li>
-					<a href="#">
+					<a href="<?php echo base_url();?>admin/dashboard">
 						Dashboard
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<?php echo base_url();?>admin/articles">
 						Articles
 					</a>
 				</li>
@@ -57,7 +59,7 @@
 			
 		</div>
 	  	<div class="btn-group pull-left">
-	  		<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Save" />
-	  		<a href="#" class="btn btn-default">Close</a>
+	  		<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add" />
+	  		<a href="<?php echo base_url()?>admin/dashboard" class="btn btn-default">Back</a>
 	  	</div>
 </form>
