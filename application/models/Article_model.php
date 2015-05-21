@@ -62,5 +62,17 @@ class Article_model extends CI_Model {
 	}
 	
 	
+	/**
+	 * Insert Article method
+	 * @param data(array)
+	 */
+	public function insert($data){
+		if($this->db->insert('articles',$data)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 }
 ?>
