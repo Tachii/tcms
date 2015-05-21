@@ -1,5 +1,5 @@
 <h1 class="sub-header">Articles</h2>
-      	  <a href="add_article.html" class="btn btn-success pull-right">Add Article</a><br /><br />
+      	  <a href="<?php echo base_url() ?>admin/articles/add" class="btn btn-success pull-right">Add Article</a><br /><br />
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
