@@ -1,3 +1,6 @@
+
+            <?php var_dump($current_url());
+			var_dump($base_url); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
