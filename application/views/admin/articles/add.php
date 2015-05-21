@@ -29,7 +29,7 @@
 			
 			<div class="form-group">
 				<label>Category</label>
-				<select name="category" class="form-control ">
+				<select name="category_id" class="form-control ">
 					<option selected>Select Category</option>
 					<?php foreach($categories as $category): ?>
 						<option value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
@@ -45,7 +45,7 @@
 			
 			<div class="form-group">
 				<label>Access</label>
-				<select class="form-control ">
+				<select name="access" class="form-control ">
 					<option selected>Select Author</option>
 					<option value="0">Everyone</option>
 					<?php foreach($groups as $group) : ?>
@@ -56,7 +56,7 @@
 			
 			<div class="form-group">
 				<label>Author</label>
-				<select class="form-control ">
+				<select name="user_id" class="form-control ">
 					<option selected>Select Author</option>
 					<?php foreach($users as $user): ?>
 						<option value="<?php echo $user->id; ?>"><?php echo $user->username; ?></option>
