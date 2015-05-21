@@ -22,7 +22,7 @@
 	                  <td><?php echo $article->created ?></td>
 	                  <td>
 	                  	<a href="<?php echo base_url()?>admin/articles/edit/<?php echo $article->id; ?>" class="btn btn-primary">Edit</a> 
-	                  	<?php if($article->published == 1): ?>
+	                  	<?php if($article->is_published == 1): ?>
 	                  		<a href="<?php echo base_url()?>admin/articles/unpublish/<?php echo $article->id; ?>" class="btn btn-warning">Unpublish</a> 
 	                  	<?php else: ?>
 	                  		<a href="<?php echo base_url()?>admin/articles/publish/<?php echo $article->id; ?>" class="btn btn-success">Publish</a> 
