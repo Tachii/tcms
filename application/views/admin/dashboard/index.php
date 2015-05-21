@@ -5,7 +5,7 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>ID</th>
                   <th>Name</th>
                   <th>Category</th>
                   <th>Author</th>
@@ -42,7 +42,7 @@
           			<table class="table table-striped">
 	          			<thead>
 	          				<tr>
-	          					<th width="70">#</th>
+	          					<th width="70">ID</th>
 	          					<th>Name</th>
 	          					<th>Actions</th>
 	          				</tr>
@@ -71,7 +71,7 @@
           			<table class="table table-striped">
 	          			<thead>
 	          				<tr>
-	          					<th width="70">#</th>
+	          					<th width="70">ID</th>
 	          					<th>Username</th>
 	          					<th>Actions</th>
 	          				</tr>
