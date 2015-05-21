@@ -28,6 +28,9 @@ class Articles extends TCMS_Controller {
 		//Get Users
 		$data['users'] = $this->User_model->get_users('id', 'DESC', 5);
 		
+		//Get Navbar Items
+		$data['navbar_items'] = $this->Navbar_model->get_navbar_items();
+		
 		//Load View
 		$data['main_content'] = 'articles/index';
 		$this->load->view('home',$data);
