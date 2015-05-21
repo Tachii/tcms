@@ -21,64 +21,71 @@
 					Add Article
 				</li>
 			</ol>
-		<div class="form-group">
 			
-			<label>Article Title</label>
-			<input type="text" class="form-control" name="title" value="<?php echo set_value('title'); ?>" placeholder="Enter Title" />
+			<div class="form-group">
+				<label>Article Title</label>
+				<input type="text" class="form-control" name="title" value="<?php echo set_value('title'); ?>" placeholder="Enter Title" />
+			</div>
 			
-			<br />
-			<label>Article Text</label>
-			<textarea class="form-control" name="body" rows="10" value="<?php echo set_value('body'); ?>" > </textarea>
+			<div class="form-group">
+				<label>Category</label>
+				<select name="category" class="form-control ">
+					<option selected>Select Category</option>
+					<?php foreach($categories as $category): ?>
+						<option value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
+					<?php endforeach ; ?>
+				</select>
+			</div>
 			
-			<br />
-			<label>Category</label>
-			<select name="category" class="form-control ">
-				<option selected>Select Category</option>
-				<?php foreach($categories as $category): ?>
-					<option value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
-				<?php endforeach ; ?>
-			</select>
+			<div class="form-group">
+				<label>Article Text</label>
+				<textarea class="form-control" name="body" rows="10" value="<?php echo set_value('body'); ?>" > </textarea>
+			</div>
 			
-			<br />
-			<label>Access</label>
-			<select class="form-control ">
-				<option selected>Select Author</option>
-				<option value="0">Everyone</option>
-				<?php foreach($groups as $group) : ?>
-					<option value="<?php echo $group->id; ?>"><?php echo $group->name; ?></option>
-				<?php endforeach; ?>
-			</select>
 			
-			<br />
-			<label>Author</label>
-			<select class="form-control ">
-				<option selected>Select Author</option>
-				<?php foreach($users as $user): ?>
-					<option value="<?php echo $user->id; ?>"><?php echo $user->username; ?></option>
-				<?php endforeach; ?>
-			</select>
+			<div class="form-group">
+				<label>Access</label>
+				<select class="form-control ">
+					<option selected>Select Author</option>
+					<option value="0">Everyone</option>
+					<?php foreach($groups as $group) : ?>
+						<option value="<?php echo $group->id; ?>"><?php echo $group->name; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
 			
-			<br />
-			<label>Published</label>
-			<br />
-			<label class="radio-inline">
-			  <input type="radio" name="is_published" value="1"> Yes
-			</label>
-			<label class="radio-inline">
-			  <input type="radio" name="is_published" value="0"> No
-			</label>
+			<div class="form-group">
+				<label>Author</label>
+				<select class="form-control ">
+					<option selected>Select Author</option>
+					<?php foreach($users as $user): ?>
+						<option value="<?php echo $user->id; ?>"><?php echo $user->username; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
 			
-			<br /><br />
-			<label>Add to Navbar</label>
-			<br />
-			<label class="radio-inline">
-			  <input type="radio" name="in_navbar" value="1"> Yes
-			</label>
-			<label class="radio-inline">
-			  <input type="radio" name="in_navbar" value="0"> No
-			</label>
+			<div class="form-group">
+				<label>Published</label>
+				<br />
+				<label class="radio-inline">
+				  <input type="radio" name="is_published" value="1"> Yes
+				</label>
+				<label class="radio-inline">
+				  <input type="radio" name="is_published" value="0"> No
+				</label>
+			</div>
 			
-		</div>
+			<div class="form-group">
+				<label>Add to Navbar</label>
+				<br />
+				<label class="radio-inline">
+				  <input type="radio" name="in_navbar" value="1"> Yes
+				</label>
+				<label class="radio-inline">
+				  <input type="radio" name="in_navbar" value="0"> No
+				</label>
+			</div>
+			
 	  	<div class="btn-group pull-left">
 	  		<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add" />
 	  		<a href="<?php echo base_url()?>admin/dashboard" class="btn btn-default">Back</a>
