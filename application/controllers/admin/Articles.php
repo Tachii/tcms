@@ -82,5 +82,13 @@ class Articles extends TCMS_Controller {
 		}
 		
 	}
+
+	public function insert($data){
+		if($this->db->insert('articles',$data)){
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
 }
