@@ -67,7 +67,7 @@ class Articles extends TCMS_Controller {
 				'access' 			=> $this->input->post('access'),
 				'is_published' 		=> $this->input->post('is_published'),
 				'in_navbar' 		=> $this->input->post('in_navbar'),
-				'order' 		=> $this->input->post('order'),
+				'order' 			=> $this->input->post('order'),
 			);			
 			
 			var_dump($this->input->post);
