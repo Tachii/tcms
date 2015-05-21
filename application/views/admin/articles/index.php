@@ -20,7 +20,15 @@
 	                  <td><?php echo $article->category_name ?></td>
 	                  <td><?php echo $article->username ?></td>
 	                  <td><?php echo $article->created ?></td>
-	                  <td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-warning">Unpublish</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
+	                  <td>
+	                  	<a href="<?php echo base_url()?>admin/articles/edit/<?php echo $article->id; ?>" class="btn btn-primary">Edit</a> 
+	                  	<?php if($article->published == 1): ?>
+	                  		<a href="<?php echo base_url()?>admin/articles/unpublish/<?php echo $article->id; ?>" class="btn btn-warning">Unpublish</a> 
+	                  	<?php else: ?>
+	                  		<a href="<?php echo base_url()?>admin/articles/publish/<?php echo $article->id; ?>" class="btn btn-success">Publish</a> 
+                  		<?php endif; ?>
+	                  	<a href="<?php echo base_url()?>admin/articles/delete/<?php echo $article->id; ?>" class="btn btn-danger">Delete</a>
+                  	</td>
 	                </tr>
                 <?php endforeach; ?>
               </tbody>
