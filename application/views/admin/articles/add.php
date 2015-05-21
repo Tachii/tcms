@@ -60,11 +60,22 @@
 			
 			<br />
 			<label>Published</label>
+			<br />
 			<label class="radio-inline">
-			  <input type="radio" name="is_published" id="inlineRadio1" value="1"> Yes
+			  <input type="radio" name="is_published" value="1"> Yes
 			</label>
 			<label class="radio-inline">
-			  <input type="radio" name="is_published" id="inlineRadio2" value="0"> No
+			  <input type="radio" name="is_published" value="0"> No
+			</label>
+			
+			<br /><br />
+			<label>Add to Navbar</label>
+			<br />
+			<label class="radio-inline">
+			  <input type="radio" name="in_navbar" value="1"> Yes
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="in_navbar" value="0"> No
 			</label>
 			
 		</div>
