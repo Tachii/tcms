@@ -28,7 +28,8 @@ class Category_model extends CI_Model {
 			$this->db->order_by($order_by,$offset);
 		}
 		$query = $this->db->get();
-		return $query->result();
+		$categories = $query->result();
+		return $categories;
 	}
 	
 }
