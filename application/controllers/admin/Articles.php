@@ -26,7 +26,8 @@ class Articles extends TCMS_Controller {
 		$data['navbar_items'] = $this->Article_model->get_navbar_items();
 		
 		//Load View
-		$this->load->view('home',$data);
+		$data['main_content'] = 'admin/articles/index';
+		$this->load->view('admin/layouts/main',$data);
 	}
 	
 	
