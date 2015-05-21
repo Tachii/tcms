@@ -1,21 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Articles extends TCMS_Controller {
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+	function __construct() {
+        parent::__construct();
+        $this->load->library('form_validation');
+    }  
 	 
 	public function index(){
 		//Get Articles
@@ -61,7 +50,7 @@ class Articles extends TCMS_Controller {
 		
 		$data['categories'] = $this->Categories_model->get_categories();
 		$data['users'] = $this->User_model->get_users();
-		$data['groups'] = $this->Groups_model->get_groups();
+		//$data['groups'] = $this->Groups_model->get_groups();
 		
 		//Checking if form was validated
 		if($this->form_validation->run() == FALSE){
