@@ -23,38 +23,48 @@
 			</ol>
 		<div class="form-group">
 			
-			<label>Jumbotron Title</label>
-			<input type="text" class="form-control" name="jtitle" />
+			<label>Article Title</label>
+			<input type="text" class="form-control" name="title" value="<?php echo set_value('title'); ?>" placeholder="Enter Title" />
 			
 			<br />
-			<label>Jumbotron Text</label>
-			<textarea class="form-control" name="jtext" rows="10"> </textarea>
+			<label>Article Text</label>
+			<textarea class="form-control" name="body" rows="10" value="<?php echo set_value('body'); ?>" > </textarea>
+			
+			<br />
+			<label>Category</label>
+			<select name="category" class="form-control ">
+				<option selected>Select Category</option>
+				<?php foreach($categories as $category): ?>
+					<option value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
+				<?php endforeach ; ?>
+			</select>
 			
 			<br />
 			<label>Access</label>
 			<select class="form-control ">
-				<option selected>Choose who will be able to access this article</option>
-				<option>Everyone</option>
-				<option>Admins</option>
-				<option>Registered Users</option>
+				<option selected>Select Author</option>
+				<option value="0">Everyone</option>
+				<?php foreach($groups as $group) : ?>
+					<option value="<?php echo $group->id; ?>"><?php echo $group->name; ?></option>
+				<?php endforeach; ?>
 			</select>
 			
 			<br />
 			<label>Author</label>
 			<select class="form-control ">
 				<option selected>Select Author</option>
-				<option>Everyone</option>
-				<option>Admins</option>
-				<option>Registered Users</option>
+				<?php foreach($users as $user): ?>
+					<option value="<?php echo $user->id; ?>"><?php echo $user->username; ?></option>
+				<?php endforeach; ?>
 			</select>
 			
 			<br />
 			<label>Published</label>
 			<label class="radio-inline">
-			  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+			  <input type="radio" name="is_published" id="inlineRadio1" value="1"> Yes
 			</label>
 			<label class="radio-inline">
-			  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+			  <input type="radio" name="is_published" id="inlineRadio2" value="0"> No
 			</label>
 			
 		</div>

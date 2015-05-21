@@ -43,14 +43,14 @@ class Articles extends TCMS_Controller {
 	 */
 	public function add(){
 		//Validation Rules
-		//$this->form->validation->set_rules('title','Title','trim|required|max_length[4]|xss_clean');
-		//$this->form->validation->set_rules('body','Body','trim|required|xss+clean');
-		//$this->form->validation->set_rules('is_published','Publish','required');
-		//$this->form->validation->set_rules('category','Category','required');
+		$this->form_validation->set_rules('title','Title','trim|required|max_length[4]|xss_clean');
+		$this->form_validation->set_rules('body','Body','trim|required|xss+clean');
+		$this->form_validation->set_rules('is_published','Publish','required');
+		$this->form_validation->set_rules('category','Category','required');
 		
 		$data['categories'] = $this->Categories_model->get_categories();
 		$data['users'] = $this->User_model->get_users();
-		//$data['groups'] = $this->Groups_model->get_groups();
+		$data['groups'] = $this->Groups_model->get_groups();
 		
 		//Checking if form was validated
 		if($this->form_validation->run() == FALSE){

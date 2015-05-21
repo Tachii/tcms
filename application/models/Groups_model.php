@@ -14,7 +14,11 @@ class Groups_model extends CI_Model {
 	 */
 	public function get_groups()
 	{
-		
+		$this->db->select('*');
+		$this->db->from('groups');
+		$query=$this->db->get();
+		$groups=$query->result();
+		return $groups;
 	}
 	
 }
