@@ -2,16 +2,16 @@
 <?php 
 var_dump($this->session->flashdata);
 	if($this->session->flashdata('article_saved')){
-		echo ('<p class="alert alert-success>"'.$this->session->flashdata('article_saved')."</p>");
+		echo ('<p class="alert alert-success">'.$this->session->flashdata('article_saved')."</p>");
 	}
 	if($this->session->flashdata('article_published')){
-		echo '<p class="alert alert-success>"'.$this->session->flashdata('article_published')."</p>";
+		echo '<p class="alert alert-success">'.$this->session->flashdata('article_published')."</p>";
 	}
 	if($this->session->flashdata('article_unpublished')){
-		echo '<p class="alert alert-success>"'.$this->session->flashdata('article_unpublished')."</p>";
+		echo '<p class="alert alert-success">'.$this->session->flashdata('article_unpublished')."</p>";
 	}
 	if($this->session->flashdata('article_deleted')){
-		echo '<p class="alert alert-success>"'.$this->session->flashdata('article_deleted')."</p>";
+		echo '<p class="alert alert-success">'.$this->session->flashdata('article_deleted')."</p>";
 	}
 ?>
 <h1 class="sub-header">Articles</h2>
