@@ -17,8 +17,7 @@ class Articles extends TCMS_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	 
-	public function index()
-	{
+	public function index(){
 		//Get Articles
 		$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
 		
@@ -48,4 +47,23 @@ class Articles extends TCMS_Controller {
 		//Load View
 		$this->load->view('inner',$data);
 	}
+
+	/**
+	 * Add Article Method
+	 * @no params
+	 */
+	public function add(){
+		//Validation Rules
+		$this->form->validation->set_rules('title','Title','trim|required|max_length[4]|xss_clean');
+		$this->form->validation->set_rules('body','Body','trim|required|xss+clean');
+		$this->form->validation->set_rules('is_published','Publish','required');
+		$this->form->validation->set_rules('category','Category','required');
+		
+		$data['categories'] = $this->Categories_model->get_categories();
+		$data['users'] = $this->User_model->get_users();
+		$data['groups'] = $this->Groups_model->get_groups();
+		
+		
+	}
+	
 }
