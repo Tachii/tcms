@@ -1,7 +1,8 @@
 <!-- Display Notification Message -->
 <?php 
+var_dump($this->session->flashdata);
 	if($this->session->flashdata('article_saved')){
-		echo '<p class="alert alert-success>"'.$this->session->flashdata('article_saved')."</p>";
+		echo ('<p class="alert alert-success>"'.$this->session->flashdata('article_saved')."</p>");
 	}
 	if($this->session->flashdata('article_published')){
 		echo '<p class="alert alert-success>"'.$this->session->flashdata('article_published')."</p>";
