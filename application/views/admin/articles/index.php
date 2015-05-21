@@ -1,3 +1,18 @@
+<!-- Display Notification Message -->
+<?php 
+	if($this->session->flashdata('article_saved')){
+		echo '<p class="alert alert-success>"'.$this->session->flashdata('article_saved');
+	}
+	if($this->session->flashdata('article_published')){
+		echo '<p class="alert alert-success>"'.$this->session->flashdata('article_published');
+	}
+	if($this->session->flashdata('article_unpublished')){
+		echo '<p class="alert alert-success>"'.$this->session->flashdata('article_unpublished');
+	}
+	if($this->session->flashdata('article_deleted')){
+		echo '<p class="alert alert-success>"'.$this->session->flashdata('article_deleted');
+	}
+?>
 <h1 class="sub-header">Articles</h2>
       	  <a href="<?php echo base_url() ?>admin/articles/add" class="btn btn-success pull-right">Add Article</a><br /><br />
           <div class="table-responsive">
