@@ -86,6 +86,11 @@
 				</label>
 			</div>
 			
+			<div class="form-group">
+				<label>Order</label>
+				<input class="form-control" style="width:60px;" type="number" name="order" value="0" min="0" />
+			</div>
+			
 	  	<div class="btn-group pull-left">
 	  		<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add" />
 	  		<a href="<?php echo base_url()?>admin/dashboard" class="btn btn-default">Back</a>
