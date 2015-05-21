@@ -29,8 +29,8 @@ class Articles extends TCMS_Controller {
 		$data['users'] = $this->User_model->get_users('id', 'DESC', 5);
 		
 		//Load View
-		$data['main_content'] = 'admin/dashboard/index';
-		$this->load->view('admin/layouts/main',$data);
+		$data['main_content'] = 'articles/index';
+		$this->load->view('home',$data);
 	}
 	
 	
