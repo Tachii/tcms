@@ -1,6 +1,6 @@
 <!-- Display Validation errors -->
 <?php echo validation_errors('<p class="alert alert-dismissable alert-danger">'); ?>
-<form>
+<form method="post" action="<?php echo base_url() ?>admin/articles/add">
 	<div class="row">	
 	  <div class="col-md-6">
 	  	<h1 class="sub-header">Add Article</h1>

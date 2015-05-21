@@ -70,6 +70,8 @@ class Articles extends TCMS_Controller {
 				'order' 		=> $this->input->post('order'),
 			);			
 			
+			var_dump($this->input->post);
+			die();
 			//Insert into Articles Table
 			$this->Article_model->insert($data);
 			
