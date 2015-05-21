@@ -71,7 +71,6 @@ class Articles extends TCMS_Controller {
 			);			
 			
 			var_dump($this->input->post);
-			die();
 			//Insert into Articles Table
 			$this->Article_model->insert($data);
 			
