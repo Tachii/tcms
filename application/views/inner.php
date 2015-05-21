@@ -27,7 +27,7 @@
           <ul class="nav nav-pills pull-right navbar-padding">
             <li role="presentation" ><a href="<?php echo base_url();?>">Home</a></li>
 			<?php foreach($navbar_items as $item): ?>
-            	<li role="presentation"><a href="<?php echo base_url();?>articles/view/<?php echo $item->id;?>"><?php echo $item->title; ?></a></li>
+            	<li <?php if ($item->id == $article->id){ echo 'class="active"';} ?> role="presentation"><a href="<?php echo base_url();?>articles/view/<?php echo $item->id;?>"><?php echo $item->title; ?></a></li>
           	<?php endforeach ; ?>
           </ul>
         </nav>
