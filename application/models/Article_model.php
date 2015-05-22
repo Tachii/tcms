@@ -52,7 +52,7 @@ class Article_model extends CI_Model {
 	
 	/**
 	 * Get Single Article
-	 * @param id(int)
+	 * @param - id(int)
 	 */
 	public function get_single_article($id){
 		$this->db->where('id',$id);
@@ -76,13 +76,18 @@ class Article_model extends CI_Model {
 
 	/**
 	 * Update Single Article
-	 * @param data(array)
-	 * @param id(int)
+	 * @param - data(array)
+	 * @param - id(int)
 	 */
 	public function update($data, $id){
 		$this->db->where('id', $id);
 		$this->db->update('articles',$data);
 		return true;
 	}
+	
+	/** 
+	 * Unpublish Article
+	 * @param - id(int)
+	 */
 }
 ?>

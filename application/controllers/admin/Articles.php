@@ -19,7 +19,7 @@ class Articles extends TCMS_Controller {
 	
 	/**
 	 * Load single article view
-	 * @param id(int) 
+	 * @param - id(int) 
 	 */
 	public function view($id){
 		//Get Navbar Items
@@ -80,7 +80,7 @@ class Articles extends TCMS_Controller {
 	
 	/**
 	 * Edit Article method
-	 * @param id(int)
+	 * @param - id(int)
 	 */
 	public function edit($id){
 		if(empty($id)){
@@ -135,7 +135,7 @@ class Articles extends TCMS_Controller {
 
 	/**
 	 * Publish Article Method
-	 * @param id(int)
+	 * @param - id(int)
 	 */
 	public function publish($id){
 		if($this->Article_model->publish($id)){
@@ -155,7 +155,7 @@ class Articles extends TCMS_Controller {
 	
 	/**
 	 * Unpublish Article Method
-	 * @param id(int)
+	 * @param - id(int)
 	 */
 	public function unpublish($id){
 		if($this->Article_model->unpublish($id)){
