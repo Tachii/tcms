@@ -19,7 +19,7 @@
 		echo '<p class="alert alert-danger">'.$this->session->flashdata('article_unpublished_error')."</p>";
 	}
 	if($this->session->flashdata('article_deleted')){
-		echo '<p class="alert alert-success">'.$this->session->flashdata('article_deleted_error')."</p>";
+		echo '<p class="alert alert-success">'.$this->session->flashdata('article_deleted')."</p>";
 	}
 	if($this->session->flashdata('article_deleted_error')){
 		echo '<p class="alert alert-danger">'.$this->session->flashdata('article_deleted_error')."</p>";

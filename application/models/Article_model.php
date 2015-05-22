@@ -117,8 +117,12 @@ class Article_model extends CI_Model {
 	 */
 	public function delete($id){
 		$this->db->where('id',$id);
-		$this->db->delete('articles');
-		return true;
+		if($this->db->delete('articles')){
+			return true;
+		} else {
+			return false;
+		}
+		
 	}
 }
 ?>
