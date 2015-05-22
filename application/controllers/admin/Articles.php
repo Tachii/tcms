@@ -87,7 +87,7 @@ class Articles extends TCMS_Controller {
 	 * Edit Article method
 	 * @param id(int)
 	 */
-	public function edit($id){
+	public function edit($id=null){
 		//Form Validation Rules
 		$this->form_validation->set_rules('title','Title','trim|required|min_length[4]|xss_clean');
 		$this->form_validation->set_rules('body','Body','trim|required|xss_clean');
