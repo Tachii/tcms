@@ -85,7 +85,6 @@ class Article_model extends CI_Model {
 	/** 
 	 * Publish Article
 	 * @param - id(int)
-	 * @param - data(array)
 	 */
 	public function publish($id){
 		$data = array('is_published' => 1);
@@ -96,7 +95,21 @@ class Article_model extends CI_Model {
 		else {
 			return false;
 		}
-		
+	}
+
+	/** 
+	 * Unpublish Article
+	 * @param - id(int)
+	 */
+	public function unpublish($id){
+		$data = array('is_published' => 0);
+		$this->db->where('id',$id);
+		if($this->db->update('articles',$data)){
+			return true;	
+		}
+		else {
+			return false;
+		}
 	}
 }
 ?>
