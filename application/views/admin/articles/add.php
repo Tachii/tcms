@@ -46,7 +46,7 @@
 			<div class="form-group">
 				<label>Access</label>
 				<select name="access" class="form-control ">
-					<option selected>Select Author</option>
+					<option selected>Select Group</option>
 					<option value="0">Everyone</option>
 					<?php foreach($groups as $group) : ?>
 						<option value="<?php echo $group->id; ?>"><?php echo $group->name; ?></option>
