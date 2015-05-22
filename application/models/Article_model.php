@@ -56,7 +56,7 @@ class Article_model extends CI_Model {
 	
 	
 	/**
-	 * Insert Article method
+	 * Insert Article
 	 * @param data(array)
 	 */
 	public function insert($data){
@@ -110,6 +110,15 @@ class Article_model extends CI_Model {
 		else {
 			return false;
 		}
+	}
+
+	/**
+	 * Delete Article
+	 */
+	public function delete($id){
+		$this->db->where('id',$id);
+		$this->db->delete('articles');
+		return true;
 	}
 }
 ?>

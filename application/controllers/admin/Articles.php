@@ -33,7 +33,7 @@ class Articles extends TCMS_Controller {
 	}
 
 	/**
-	 * Add Article Method
+	 * Add Article
 	 * 
 	 */
 	public function add(){
@@ -79,7 +79,7 @@ class Articles extends TCMS_Controller {
 	
 	
 	/**
-	 * Edit Article method
+	 * Edit Article
 	 * @param - id(int)
 	 */
 	public function edit($id){
@@ -134,7 +134,7 @@ class Articles extends TCMS_Controller {
 	}
 
 	/**
-	 * Publish Article Method
+	 * Publish Article
 	 * @param - id(int)
 	 */
 	public function publish($id){
@@ -154,7 +154,7 @@ class Articles extends TCMS_Controller {
 	}
 	
 	/**
-	 * Unpublish Article Method
+	 * Unpublish Article
 	 * @param - id(int)
 	 */
 	public function unpublish($id){
@@ -173,4 +173,16 @@ class Articles extends TCMS_Controller {
 		}
 	}
 	
+	/**
+	 * Delete Article
+	 * @param - id(int)
+	 */
+	public function delete($id){
+		$this->Article_model->delete($id);
+		
+		//Create Message
+		$this->session->set_flashdata('article_deleted', 'Article has been deleted');
+		
+		redirect('admin/articles');
+	}
 }
