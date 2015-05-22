@@ -88,6 +88,7 @@ class Article_model extends CI_Model {
 	 * @param - data(array)
 	 */
 	public function publish($id){
+		$data = array('is_published' => 1);
 		$this->db->where('id',$id);
 		if($this->db->update('articles',$data)){
 			return true;	
