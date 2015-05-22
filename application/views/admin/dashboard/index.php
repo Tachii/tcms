@@ -22,9 +22,9 @@
 	                  <td><?php echo $article->username;?></td>
 	                  <td><?php echo $article->created;?></td>
 	                  <td>
-	                  	<a href="<?php echo base_url();?>admin/articles/edit<?php echo $article->id; ?>" class="btn btn-primary">Edit</a> 
-	                  	<a href="<?php echo base_url();?>admin/articles/unpublish<?php echo $article->id; ?>" class="btn btn-warning">Unpublish</a> 
-	                  	<a href="<?php echo base_url();?>admin/articles/delete<?php echo $article->id; ?>" class="btn btn-danger">Delete</a>
+	                  	<a href="<?php echo base_url();?>admin/articles/edit/<?php echo $article->id; ?>" class="btn btn-primary">Edit</a> 
+	                  	<a href="<?php echo base_url();?>admin/articles/unpublish/<?php echo $article->id; ?>" class="btn btn-warning">Unpublish</a> 
+	                  	<a href="<?php echo base_url();?>admin/articles/delete/<?php echo $article->id; ?>" class="btn btn-danger">Delete</a>
                   	</td>
 	                </tr>
                 <?php endforeach; ?>
