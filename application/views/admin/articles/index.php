@@ -3,14 +3,26 @@
 	if($this->session->flashdata('article_saved')){
 		echo ('<p class="alert alert-success">'.$this->session->flashdata('article_saved')."</p>");
 	}
+	if($this->session->flashdata('article_saved_error')){
+		echo ('<p class="alert alert-danger">'.$this->session->flashdata('article_saved_error')."</p>");
+	}
 	if($this->session->flashdata('article_published')){
 		echo '<p class="alert alert-success">'.$this->session->flashdata('article_published')."</p>";
+	}
+	if($this->session->flashdata('article_published_error')){
+		echo '<p class="alert alert-danger">'.$this->session->flashdata('article_published_error')."</p>";
 	}
 	if($this->session->flashdata('article_unpublished')){
 		echo '<p class="alert alert-success">'.$this->session->flashdata('article_unpublished')."</p>";
 	}
+	if($this->session->flashdata('article_unpublished_error')){
+		echo '<p class="alert alert-danger">'.$this->session->flashdata('article_unpublished_error')."</p>";
+	}
 	if($this->session->flashdata('article_deleted')){
-		echo '<p class="alert alert-success">'.$this->session->flashdata('article_deleted')."</p>";
+		echo '<p class="alert alert-success">'.$this->session->flashdata('article_deleted_error')."</p>";
+	}
+	if($this->session->flashdata('article_deleted_error')){
+		echo '<p class="alert alert-danger">'.$this->session->flashdata('article_deleted_error')."</p>";
 	}
 ?>
 <h1 class="sub-header">Articles</h2>
