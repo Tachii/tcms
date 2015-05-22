@@ -49,7 +49,7 @@
 					<option>Select Group</option>
 					<option value="0">Everyone</option>
 					<?php foreach($groups as $group) : ?>
-						<option <?php if($article) ?> value="<?php echo $group->id; ?>"><?php echo $group->name; ?></option>
+						<option <?php if($article->access == $group->id) ?> value="<?php echo $group->id; ?>"><?php echo $group->name; ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>
@@ -59,7 +59,7 @@
 				<select name="user_id" class="form-control ">
 					<option selected>Select Author</option>
 					<?php foreach($users as $user): ?>
-						<option value="<?php echo $user->id; ?>"><?php echo $user->username; ?></option>
+						<option <?php if($user->id == $article->id){echo 'selected';} ?> value="<?php echo $user->id; ?>"><?php echo $user->username; ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>
@@ -68,10 +68,10 @@
 				<label>Published</label>
 				<br />
 				<label class="radio-inline">
-				  <input type="radio" name="is_published" value="1"> Yes
+				  <input <?php if($article->is_published) echo 'checked="checked"'; ?> type="radio" name="is_published" value="1"> Yes
 				</label>
 				<label class="radio-inline">
-				  <input type="radio" name="is_published" value="0"> No
+				  <input <?php if(!$article->is_published) echo 'checked="checked"'; ?> type="radio" name="is_published" value="0"> No
 				</label>
 			</div>
 			
@@ -79,16 +79,16 @@
 				<label>Add to Navbar</label>
 				<br />
 				<label class="radio-inline">
-				  <input type="radio" name="in_navbar" value="1"> Yes
+				  <input <?php if($article->in_navbar) echo 'checked="checked"'; ?> type="radio" name="in_navbar" value="1"> Yes
 				</label>
 				<label class="radio-inline">
-				  <input type="radio" name="in_navbar" value="0"> No
+				  <input <?php if(!$article->in_navbar) echo 'checked="checked"'; ?> type="radio" name="in_navbar" value="0"> No
 				</label>
 			</div>
 			
 			<div class="form-group">
 				<label>Order</label>
-				<input class="form-control" style="width:60px;" type="number" name="order" value="0" min="0" />
+				<input class="form-control" style="width:60px;" type="number" name="order" value="<?php echo $article->order; ?>" min="0" />
 			</div>
 			
 	  	<div class="btn-group pull-left">
