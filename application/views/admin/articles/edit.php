@@ -18,7 +18,7 @@
 					</a>
 				</li>
 				<li>
-					Add Article
+					Edit Article
 				</li>
 			</ol>
 			
