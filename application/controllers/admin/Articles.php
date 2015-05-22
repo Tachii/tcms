@@ -1,11 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Articles extends TCMS_Controller {
-	function __construct() {
-        parent::__construct();
-        $this->load->library('form_validation');
-    }  
-	 
 	public function index(){
 		//Get Articles
 		$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
@@ -152,6 +147,26 @@ class Articles extends TCMS_Controller {
 		}else{
 			//Create Notification stored in Session
 			$this->session->set_flashdata('article_published_error','Article has not been published');
+			
+			//Redirect back to Articles view
+			redirect('admin/articles');
+		}
+	}
+	
+	/**
+	 * Unpublish Article Method
+	 * @param id(int)
+	 */
+	public function publish($id){
+		if($this->Artticle_model->unpublish($id)){
+			//Create Notification stored in Session
+			$this->session->set_flashdata('article_published','Article has been unpublished');
+			
+			//Redirect back to Articles view
+			redirect('admin/articles');
+		}else{
+			//Create Notification stored in Session
+			$this->session->set_flashdata('article_published_error','Article has not been unpublished');
 			
 			//Redirect back to Articles view
 			redirect('admin/articles');
