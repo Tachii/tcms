@@ -1,6 +1,6 @@
 <!-- Display Validation errors -->
 <?php echo validation_errors('<p class="alert alert-dismissable alert-danger">'); ?>
-<form method="post" action="<?php echo base_url() ?>admin/articles/edit<?php echo $article->id ?>">
+<form method="post" action="<?php echo base_url() ?>admin/articles/edit/<?php echo $article->id ?>">
 	<div class="row">	
 	  <div class="col-md-6">
 	  	<h1 class="sub-header">Add Article</h1>
@@ -92,7 +92,7 @@
 			</div>
 			
 	  	<div class="btn-group pull-left">
-	  		<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add" />
+	  		<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Save" />
 	  		<a href="<?php echo base_url()?>admin/dashboard" class="btn btn-default">Back</a>
 	  	</div>
 </form>
