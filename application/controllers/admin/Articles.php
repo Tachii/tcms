@@ -89,7 +89,7 @@ class Articles extends TCMS_Controller {
 	 */
 	public function edit($id){
 		if(empty($id)){
-			$this->session->set_flashdata('article_saved','Your article was not saved because id is empty');
+			$this->session->set_flashdata('article_saved_error','Your article was not saved');
 			redirect('admin/articles');
 		}
 		//Form Validation Rules
@@ -131,12 +131,31 @@ class Articles extends TCMS_Controller {
 				redirect('admin/articles');
 			}
 		} else {
-			$this->session->set_flashdata('article_saved','Your article was not saved because it didnt find any entries that match request');
+			$this->session->set_flashdata('article_saved_error','Your article was not saved');
 			redirect('admin/articles');
 			
 		}
 		
 	}
-	
+
+	/**
+	 * Publish Article Method
+	 * @param id(int)
+	 */
+	public function publish($id){
+		if($this->Artticle_model->publish($id)){
+			//Create Notification stored in Session
+			$this->session->set_flashdata('article_published','Article has been published');
+			
+			//Redirect back to Articles view
+			redirect('admin/articles');
+		}else{
+			//Create Notification stored in Session
+			$this->session->set_flashdata('article_published_error','Article has not been published');
+			
+			//Redirect back to Articles view
+			redirect('admin/articles');
+		}
+	}
 	
 }
