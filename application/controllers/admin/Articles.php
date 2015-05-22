@@ -138,7 +138,7 @@ class Articles extends TCMS_Controller {
 	 * @param id(int)
 	 */
 	public function publish($id){
-		if($this->Artticle_model->publish($id)){
+		if($this->Article_model->publish($id)){
 			//Create Notification stored in Session
 			$this->session->set_flashdata('article_published','Article has been published');
 			
@@ -157,8 +157,8 @@ class Articles extends TCMS_Controller {
 	 * Unpublish Article Method
 	 * @param id(int)
 	 */
-	public function publish($id){
-		if($this->Artticle_model->unpublish($id)){
+	public function unpublish($id){
+		if($this->Article_model->unpublish($id)){
 			//Create Notification stored in Session
 			$this->session->set_flashdata('article_published','Article has been unpublished');
 			
