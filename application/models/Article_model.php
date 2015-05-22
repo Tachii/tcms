@@ -73,6 +73,15 @@ class Article_model extends CI_Model {
 			return false;
 		}
 	}
-	
+
+	/**
+	 * Update Single Article
+	 * @param data(array)
+	 * @param id(int)
+	 */
+	public function update($data, $id){
+		$this->db->where('id', $id);
+		$this->db->update('articles',$data);
+	}
 }
 ?>
