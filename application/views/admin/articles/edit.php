@@ -24,32 +24,32 @@
 			
 			<div class="form-group">
 				<label>Article Title</label>
-				<input type="text" class="form-control" name="title" value="<?php echo set_value('title'); ?>" placeholder="Enter Title" />
+				<input type="text" class="form-control" name="title" value="<?php echo $article->title; ?>" placeholder="Enter Title" />
 			</div>
 			
 			<div class="form-group">
 				<label>Category</label>
 				<select name="category_id" class="form-control ">
-					<option selected>Select Category</option>
+					<option>Select Category</option>
 					<?php foreach($categories as $category): ?>
-						<option value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
+						<option <?php if($article->category_id == $category->id){echo 'selected';} ?> value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
 					<?php endforeach ; ?>
 				</select>
 			</div>
 			
 			<div class="form-group">
 				<label>Article Text</label>
-				<textarea class="form-control" name="body" rows="10" value="<?php echo set_value('body'); ?>" > </textarea>
+				<textarea class="form-control" name="body" rows="10" value="<?php echo set_value('body'); ?>" > <?php echo $article->body; ?> </textarea>
 			</div>
 			
 			
 			<div class="form-group">
 				<label>Access</label>
 				<select name="access" class="form-control ">
-					<option selected>Select Author</option>
+					<option>Select Group</option>
 					<option value="0">Everyone</option>
 					<?php foreach($groups as $group) : ?>
-						<option value="<?php echo $group->id; ?>"><?php echo $group->name; ?></option>
+						<option <?php if($article) ?> value="<?php echo $group->id; ?>"><?php echo $group->name; ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>
