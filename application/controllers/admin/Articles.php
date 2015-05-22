@@ -139,6 +139,7 @@ class Articles extends TCMS_Controller {
 	 */
 	public function publish($id){
 		if($this->Article_model->publish($id)){
+			die(var_dump($data));
 			//Create Notification stored in Session
 			$this->session->set_flashdata('article_published','Article has been published');
 			
