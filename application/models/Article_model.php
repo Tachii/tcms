@@ -1,13 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Article_model extends CI_Model {
-	
-    public function __construct()
-    {
-            // Call the CI_Model constructor
-            parent::__construct();
-    }
-	
 	/**
 	 * Get Articles
 	 * 
@@ -88,8 +81,9 @@ class Article_model extends CI_Model {
 	/** 
 	 * Unpublish Article
 	 * @param - id(int)
+	 * @param - data(array)
 	 */
-	public function publish($id){
+	public function publish($id, $data){
 		$data = array('is_published' => 1);
 		$this->db->where('id',$id);
 		$this->db->update('articles',$data);
