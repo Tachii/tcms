@@ -90,6 +90,7 @@ class Articles extends TCMS_Controller {
 	public function edit($id){
 		if(empty($id)){
 			redirect('admin/articles');
+			$this->session->set_flashdata('article_saved','Your article was not saved because id is empty');
 		}
 		//Form Validation Rules
 		$this->form_validation->set_rules('title','Title','trim|required|min_length[4]|xss_clean');
@@ -131,6 +132,7 @@ class Articles extends TCMS_Controller {
 			}
 		} else {
 			redirect('admin/articles');
+			$this->session->set_flashdata('article_saved','Your article was not saved because it didnt find any entries that match request');
 		}
 		
 	}
