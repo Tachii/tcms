@@ -1,3 +1,4 @@
+<?php print_r($this->input->post()); ?>
 <!-- Display Validation errors -->
 <?php echo validation_errors('<p class="alert alert-dismissable alert-danger">'); ?>
 <form method="post" action="<?php echo base_url() ?>admin/articles/add">

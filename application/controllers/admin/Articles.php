@@ -53,7 +53,7 @@ class Articles extends TCMS_Controller {
 		$data['groups'] = $this->Groups_model->get_groups();
 		
 		//Checking if form was validated
-		if($this->form_validation->run() == FALSE){
+		if($this->form_validation->run() === FALSE){
 			//Views
 			$data['main_content'] = 'admin/articles/add';
 			$this->load->view('admin/layouts/main',$data);
