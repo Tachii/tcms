@@ -22,7 +22,7 @@
 				</li>
 			</ol>
 			
-			<div class="form-group">
+			<div class="form-group col-xs-3">
 				<label>Category Name</label>
 				<input type="text" class="form-control" name="name" value="<?php echo set_value('name'); ?>" placeholder="Enter Category Name" />
 			</div>
