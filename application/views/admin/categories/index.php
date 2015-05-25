@@ -1,0 +1,28 @@
+          		<div class="table-responsive">
+          			<table class="table table-striped">
+	          			<thead>
+	          				<tr>
+	          					<th width="70">#</th>
+	          					<th>Name</th>
+	          					<th>Actions</th>
+	          				</tr>
+	          			</thead>
+	          			<tbody>
+	          				<tr>
+	          					<td>1</td>
+	          					<td>sit</td>
+	          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
+	          				</tr>
+	          				<tr>
+	          					<td>1</td>
+	          					<td>sit</td>
+	          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
+	          				</tr>
+	          				<tr>
+	          					<td>1</td>
+	          					<td>sit</td>
+	          					<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
+	          				</tr>
+	          			</tbody>
+          			</table>
+          		</div>
