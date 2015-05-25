@@ -89,7 +89,7 @@ class Articles extends TCMS_Controller {
 	 */
 	public function edit($id){
 		if(empty($id)){
-			$this->session->set_flashdata('article_saved_error','Article doesn\'t exist');
+			$this->session->set_flashdata('article_saved_error','Article with such id doesn\'t exist');
 			redirect('admin/articles');
 		}
 		//Form Validation Rules

@@ -51,7 +51,10 @@ class Categories_model extends CI_Model {
 	 */
 	public function edit($id,$data)
 	{
-		if()
+		if(empty($id)){
+			$this->session->set_flashdata('category_saved_error',"Category with such id doesn't exist");
+			redirect('admin/articles');
+		}
 	}
 	
 }
