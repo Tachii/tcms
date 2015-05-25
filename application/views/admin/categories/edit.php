@@ -29,7 +29,7 @@
 				<div class="btn-group pull-left">
 					<?php foreach($categories as $category) : ?>
 						<?php if($id == $category->id) : ?>
-		  					<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add" />
+		  					<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add"> <?php echo $category->name; ?> </input>
 		  				<?php endif ; ?>
 		  			<?php endforeach; ?>
 		  		<a href="<?php echo base_url()?>admin/categories" class="btn btn-default">Back</a>
