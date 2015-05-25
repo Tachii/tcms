@@ -14,7 +14,7 @@
 		          				<tr>
 		          					<td><?php echo $category->id; ?></td>
 	          						<td><?php echo $category->name; ?></td>
-	          						<td><a href="edit_article.html" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
+	          						<td><a href="<?php echo base_url()?>/admin/categories/edit/$category->id" class="btn btn-primary">Edit</a> <a href="edit_article.html" class="btn btn-danger">Delete</a></td>
 		          				</tr>
 	          				<?php endforeach; ?>
 	          			</tbody>
