@@ -53,6 +53,10 @@ class Categories extends TCMS_Controller{
 			redirect('admin/categories');
 		}
 		
+		//To display data in form
+		$data['categories'] = $this->Categories_model->get_categories();
+		$data['id'] = $id;
+		
 		//Validation Rules
 		$this->form_validation->set_rules('name','Category','trim|required|min_length[4]|xss_clean');
 		
