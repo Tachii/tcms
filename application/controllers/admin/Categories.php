@@ -13,7 +13,7 @@ class Categories extends TCMS_Controller{
 	/**
 	 * Add Category
 	 */
-	public function add($id){
+	public function add(){
 		
 	}
 	
