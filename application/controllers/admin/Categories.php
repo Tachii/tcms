@@ -44,10 +44,6 @@ class Categories extends TCMS_Controller{
 			
 			
 		}
-		
-		//Loading Views
-		$data['main_content'] = 'admin/categories/add';
-		$this->load->view('admin/layouts/main',$data);
 	}
 	
 }
