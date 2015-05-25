@@ -53,7 +53,7 @@ class Articles extends TCMS_Controller {
 			//Views
 			$data['main_content'] = 'admin/articles/add';
 			//redirect('admin/articles/add');
-			$this->load->view('admin/layouts/main',$data);
+			redirect('admin/layouts/main',$data);
 		} else {
 			//Create Articles Data Array
 			$data = array(
