@@ -14,7 +14,9 @@ class Categories extends TCMS_Controller{
 	 * Add Category
 	 */
 	public function add(){
-		
+		//Loading Views
+		$data['main_content'] = 'admin/categories/add';
+		$this->load->view('admin/layouts/main',$data);
 	}
 	
 }
