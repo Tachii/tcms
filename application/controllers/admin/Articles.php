@@ -52,8 +52,7 @@ class Articles extends TCMS_Controller {
 		if($this->form_validation->run() == FALSE){
 			//Views
 			$data['main_content'] = 'admin/articles/add';
-			//redirect('admin/articles/add');
-			redirect('admin/layouts/main',$data);
+			$this->load->view('admin/layouts/main',$data);
 		} else {
 			//Create Articles Data Array
 			$data = array(
