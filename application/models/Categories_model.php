@@ -32,5 +32,17 @@ class Categories_model extends CI_Model {
 		return $categories;
 	}
 	
+	/**
+	 * Add New Category
+	 */
+	public function add()
+	{
+		if($this->db->insert('categories',$data)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 }
 ?>
