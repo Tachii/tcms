@@ -15,7 +15,7 @@ class Categories extends TCMS_Controller{
 	 */
 	public function add(){
 		//Validation Rules
-		$this->form_validation->set_rules('name','Name','trim|required|min_length[4]|xss_clean');
+		$this->form_validation->set_rules('name','Category','trim|required|min_length[4]|xss_clean');
 		
 		//Checking if form was validated
 		if($this->form_validation->run() === FALSE){
