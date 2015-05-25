@@ -31,6 +31,17 @@ class Categories_model extends CI_Model {
 	}
 	
 	/**
+	 * Get Single Category
+	 * @param - id(int)
+	 */
+	public function get_single_category($id){
+		$this->db->where('id',$id);
+		$query = $this->db->get('categories');
+		$category = $query->row();
+		return $category;
+	}
+	
+	/**
 	 * Add New Category
 	 */
 	public function insert($data){
