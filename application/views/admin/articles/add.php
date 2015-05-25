@@ -30,7 +30,7 @@
 			<div class="form-group">
 				<label>Category</label>
 				<select name="category_id" class="form-control ">
-					<option selected value="">Select Category</option>
+					<option>Select Category</option>
 					<?php foreach($categories as $category): ?>
 						<option value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
 					<?php endforeach ; ?>
