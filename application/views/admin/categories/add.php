@@ -27,7 +27,7 @@
 				<input type="text" class="form-control" name="name" value="<?php echo set_value('name'); ?>" placeholder="Enter Category Name" />
 			</div>
 			
-	  	<div class="btn-group pull-left">
+	  	<div class="form-group btn-group pull-left">
 	  		<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add" />
 	  		<a href="<?php echo base_url()?>admin/dashboard" class="btn btn-default">Back</a>
 	  	</div>
