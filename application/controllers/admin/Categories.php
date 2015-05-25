@@ -47,7 +47,7 @@ class Categories extends TCMS_Controller{
 	/**
 	 * Edit Category
 	 */
-	public function update($id){
+	public function edit($id){
 		if(empty($id)){
 			$this->session->set_flashdata('category_saved_error','Category with such id doesn\'t exist');
 			redirect('admin/categories');
