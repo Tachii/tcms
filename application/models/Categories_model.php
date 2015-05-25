@@ -44,5 +44,15 @@ class Categories_model extends CI_Model {
 		}
 	}
 	
+	/**
+	 * Edit Category
+	 * @param - id(int)
+	 * @param - data(array)
+	 */
+	public function edit($id,$data)
+	{
+		if()
+	}
+	
 }
 ?>
