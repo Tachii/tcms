@@ -46,7 +46,7 @@ class Categories_model extends CI_Model {
 	 * @param - id(int)
 	 * @param - data(array)
 	 */
-	public function edit($id,$data){
+	public function update($id,$data){
 		$this->db->where('id', $id);
 		if($this->db->update('categories',$data)){
 			return true;

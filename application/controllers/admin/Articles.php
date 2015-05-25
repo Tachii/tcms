@@ -37,6 +37,7 @@ class Articles extends TCMS_Controller {
 	 * 
 	 */
 	public function add(){
+		
 		//Validation Rules
 		$this->form_validation->set_rules('title','Title','trim|required|min_length[4]|xss_clean');
 		$this->form_validation->set_rules('category_id','Category','required');
