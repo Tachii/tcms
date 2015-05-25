@@ -28,7 +28,7 @@
 				<br />
 				<div class="btn-group pull-left">
 		  			<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add" />
-		  		<a href="<?php echo base_url()?>admin/dashboard/categories" class="btn btn-default">Back</a>
+		  		<a href="<?php echo base_url()?>admin/categories" class="btn btn-default">Back</a>
 		  		</div>
 			</div>
 		  	
