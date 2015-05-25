@@ -24,7 +24,7 @@ class Categories extends TCMS_Controller{
 			$this->load->view('admin/layouts/main',$data);
 		} else {
 			//Set data
-			$data =  $this->input->post('name');
+			$data =  array('name' => $this->input->post('name'));
 			
 			//Insert data into Categories Table
 			if($this->Categories_model->add($data)){
