@@ -20,7 +20,7 @@ class Categories extends TCMS_Controller{
 		//Checking if form was validated
 		if($this->form_validation->run() === FALSE){
 			//Views
-			$data['main_content'] = 'admin/articles/add';
+			$data['main_content'] = 'admin/categories/add';
 			$this->load->view('admin/layouts/main',$data);
 		} else {
 			//Set data
