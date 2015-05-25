@@ -96,12 +96,12 @@ class Categories extends TCMS_Controller{
 		
 		if($this->Categories_model->delete($id)){
 			//Create Message & Redirect
-			$this->session->set_flashdata('category_deleted', 'Article has been deleted');
-			redirect('admin/articles');
+			$this->session->set_flashdata('category_deleted', 'Category has been deleted');
+			redirect('admin/categories');
 		} else{
 			//Create Message & Redirect
-			$this->session->set_flashdata('category_deleted_error', 'Article has not been deleted');
-			redirect('admin/articles');
+			$this->session->set_flashdata('category_deleted_error', 'Category has not been deleted');
+			redirect('admin/categories');
 		}
 		
 		
