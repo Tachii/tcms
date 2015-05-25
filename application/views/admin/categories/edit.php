@@ -24,15 +24,11 @@
 			
 			<div class="form-group col-xs-3">
 				<label>Category Name</label>
-				<input type="text" class="form-control" name="name" value="<?php echo set_value('name'); ?>" placeholder="Enter Category Name" />
+				<input type="text" class="form-control" name="name" value="<?php echo $category->name; ?>" placeholder="Enter Category Name" />
 				<br />
 				<div class="btn-group pull-left">
-					<?php foreach($categories as $category) : ?>
-						<?php if($id == $category->id) : ?>
-		  					<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add"> <?php echo $category->name; ?> </input>
-		  				<?php endif ; ?>
-		  			<?php endforeach; ?>
-		  		<a href="<?php echo base_url()?>admin/categories" class="btn btn-default">Back</a>
+		  			<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add">
+		  			<a href="<?php echo base_url()?>admin/categories" class="btn btn-default">Back</a>
 		  		</div>
 			</div>
 		  	
