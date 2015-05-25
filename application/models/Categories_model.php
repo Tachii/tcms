@@ -66,5 +66,18 @@ class Categories_model extends CI_Model {
 		}
 	}
 	
+	/**
+	 * Delete Category
+	 * @param - id(int)
+	 */
+	public function delete($id){
+		$this->db->where('id',$id);
+		if($this->db->delete('categories')){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 }
 ?>

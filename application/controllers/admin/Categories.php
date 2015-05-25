@@ -46,6 +46,7 @@ class Categories extends TCMS_Controller{
 	
 	/**
 	 * Edit Category
+	 * @param - id(int)
 	 */
 	public function edit($id){
 		if(empty($id)){
@@ -85,6 +86,26 @@ class Categories extends TCMS_Controller{
 			}
 		}
 	
+	}
+
+	/**
+	 * Delete Category
+	 * @param - id(int);
+	 */
+	public function delete($id){
+		
+		if($this->Categories_model->delete($id)){
+			//Create Message & Redirect
+			$this->session->set_flashdata('category_deleted', 'Article has been deleted');
+			redirect('admin/articles');
+		} else{
+			//Create Message & Redirect
+			$this->session->set_flashdata('category_deleted_error', 'Article has not been deleted');
+			redirect('admin/articles');
+		}
+		
+		
+		
 	}
 	
 }

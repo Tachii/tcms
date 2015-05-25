@@ -111,6 +111,7 @@ class Article_model extends CI_Model {
 
 	/**
 	 * Delete Article
+	 * @param - id(int)
 	 */
 	public function delete($id){
 		$this->db->where('id',$id);
@@ -119,7 +120,6 @@ class Article_model extends CI_Model {
 		} else {
 			return false;
 		}
-		
 	}
 }
 ?>
