@@ -54,7 +54,7 @@ class Categories extends TCMS_Controller{
 		}
 		
 		//To display data in form
-		$data['category'] = $this->Categories_model->get_single_category();
+		$data['category'] = $this->Categories_model->get_single_category($id);
 		
 		//Validation Rules
 		$this->form_validation->set_rules('name','Category','trim|required|min_length[4]|xss_clean');

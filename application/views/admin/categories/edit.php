@@ -1,4 +1,5 @@
 <!-- Display Validation errors -->
+<?php var_dump($category); ?> 
 <?php echo validation_errors('<p class="alert alert-dismissable alert-danger">'); ?>
 <form method="post" action="<?php echo base_url() ?>admin/categories/add">
 	<div class="row">	
