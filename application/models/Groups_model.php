@@ -2,8 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Groups_model extends CI_Model {
 	
-    public function __construct()
-    {
+    public function __construct(){
             // Call the CI_Model constructor
             parent::__construct();
     }
@@ -12,8 +11,7 @@ class Groups_model extends CI_Model {
 	 * Get Groups
 	 * 
 	 */
-	public function get_groups()
-	{
+	public function get_groups(){
 		$this->db->select('*');
 		$this->db->from('groups');
 		$query=$this->db->get();

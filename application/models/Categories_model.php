@@ -2,8 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Categories_model extends CI_Model {
 	
-    public function __construct()
-    {
+    public function __construct(){
             // Call the CI_Model constructor
             parent::__construct();
     }
@@ -17,8 +16,7 @@ class Categories_model extends CI_Model {
 	 * @param - offset(int)
 	 * 
 	 */
-	public function get_categories($order_by = null, $sort='DESC', $limit = null, $offset = 0)
-	{
+	public function get_categories($order_by = null, $sort='DESC', $limit = null, $offset = 0){
 		$this->db->select('*');
 		$this->db->from('categories');
 		if($limit != null){
@@ -35,8 +33,7 @@ class Categories_model extends CI_Model {
 	/**
 	 * Add New Category
 	 */
-	public function add($data)
-	{
+	public function insert($data){
 		if($this->db->insert('categories',$data)){
 			return true;
 		} else {
@@ -49,11 +46,12 @@ class Categories_model extends CI_Model {
 	 * @param - id(int)
 	 * @param - data(array)
 	 */
-	public function edit($id,$data)
-	{
-		if(empty($id)){
-			$this->session->set_flashdata('category_saved_error',"Category with such id doesn't exist");
-			redirect('admin/articles');
+	public function edit($id,$data){
+		$this->db->where('id', $id);
+		if($this->db->update('categories',$data)){
+			return true;
+		} else {
+			return false;
 		}
 	}
 	

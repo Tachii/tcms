@@ -17,8 +17,7 @@ class Articles extends TCMS_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	 
-	public function index()
-	{
+	public function index(){
 		//Get Articles
 		$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
 		

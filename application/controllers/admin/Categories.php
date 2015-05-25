@@ -27,7 +27,7 @@ class Categories extends TCMS_Controller{
 			$data =  array('name' => $this->input->post('name'));
 			
 			//Insert data into Categories Table
-			if($this->Categories_model->add($data)){
+			if($this->Categories_model->insert($data)){
 				
 				//Create Notification
 				$this->session->set_flashdata('category_saved','Your category was saved!');
@@ -41,8 +41,6 @@ class Categories extends TCMS_Controller{
 				//Redirect
 				redirect('admin/categories');
 			}
-			
-			
 		}
 	}
 	

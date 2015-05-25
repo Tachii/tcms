@@ -10,8 +10,7 @@ class Article_model extends CI_Model {
 	 * @param - offset(int)
 	 * 
 	 */
-	public function get_articles($order_by = null, $sort='DESC', $limit = null, $offset = 0)
-	{
+	public function get_articles($order_by = null, $sort='DESC', $limit = null, $offset = 0){
 		$this->db->from('articles AS article');
 		$this->db->select('article.*,category.name as category_name, user.first_name, user.last_name, user.username');
 		$this->db->join('categories AS category', 'category.id = article.category_id','left');
@@ -34,8 +33,7 @@ class Article_model extends CI_Model {
 	/**
 	 * Get Navbar Items
 	 */
-	public function get_navbar_items()
-	{
+	public function get_navbar_items(){
 		$this->db->where('in_navbar',1);
 		$this->db->order_by('order');
 		$query=$this->db->get('articles'); 
@@ -74,7 +72,6 @@ class Article_model extends CI_Model {
 	 */
 	public function update($data, $id){
 		$this->db->where('id', $id);
-		
 		if($this->db->update('articles',$data)){
 			return true;
 		} else {
