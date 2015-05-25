@@ -10,3 +10,4 @@ class Categories extends TCMS_Controller{
 		$this->load->view('admin/layouts/main',$data);
 	}
 }
+//
