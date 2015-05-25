@@ -39,9 +39,10 @@ class Articles extends TCMS_Controller {
 	public function add(){
 		//Validation Rules
 		$this->form_validation->set_rules('title','Title','trim|required|min_length[4]|xss_clean');
+		$this->form_validation->set_rules('category_id','Category','required');
 		$this->form_validation->set_rules('body','Body','trim|required|xss_clean');
 		$this->form_validation->set_rules('is_published','Publish','required');
-		$this->form_validation->set_rules('category_id','Category','required');
+		
 		
 		$data['categories'] = $this->Categories_model->get_categories();
 		$data['users'] = $this->User_model->get_users();
@@ -51,6 +52,7 @@ class Articles extends TCMS_Controller {
 		if($this->form_validation->run() == FALSE){
 			//Views
 			$data['main_content'] = 'admin/articles/add';
+			//redirect('admin/articles/add');
 			$this->load->view('admin/layouts/main',$data);
 		} else {
 			//Create Articles Data Array

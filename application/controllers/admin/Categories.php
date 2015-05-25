@@ -9,5 +9,12 @@ class Categories extends TCMS_Controller{
 		$data['main_content'] = 'admin/categories/index';
 		$this->load->view('admin/layouts/main',$data);
 	}
+	
+	/**
+	 * Add Category
+	 */
+	public function add($id){
+		
+	}
+	
 }
-//
