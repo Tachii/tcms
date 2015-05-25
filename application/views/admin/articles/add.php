@@ -39,7 +39,7 @@
 			
 			<div class="form-group">
 				<label>Article Text</label>
-				<textarea class="form-control" name="body" rows="10" value="<?php echo set_value('body'); ?>" > </textarea>
+				<textarea class="form-control" name="body" rows="10" value="<?php echo set_value('title'); ?>" > </textarea>
 			</div>
 			
 			
