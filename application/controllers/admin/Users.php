@@ -73,6 +73,7 @@ class Users extends TCMS_Controller {
 		
 		//Load View
 		$data['groups'] = $this->Group_model->get_groups();
+		$data['user'] = $this->User_model->get_single_user($id);
 		$data['main_content'] = 'admin/users/edit';
 		
 		//Checking if form was validated

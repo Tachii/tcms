@@ -26,7 +26,7 @@
 		<div class="form-group">
 			
 			<label>First Name</label>
-			<input type="text" class="form-control" name="firstname" value="<?php echo set_value('firstname') ?>"/>
+			<input type="text" class="form-control" name="firstname" value="<?php echo $user ?>"/>
 			
 			<br />
 			<label>Last Name</label>
