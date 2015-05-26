@@ -34,12 +34,12 @@ class Users extends TCMS_Controller {
 		} else {
 			//Create Articles Data Array
 			$data = array(
-				'first_name' 		=> $this->input->post('title'),
-		        'last_name' 		=> $this->input->post('body'),
-				'username' 			=> $this->input->post('category_id'),
-				'email' 			=> $this->input->post('user_id'),
-				'password' 			=> $this->input->post('access'),
-				'group_id' 			=> $this->input->post('is_published')
+				'first_name' 		=> $this->input->post('firstname'),
+		        'last_name' 		=> $this->input->post('lastname'),
+				'username' 			=> $this->input->post('username'),
+				'email' 			=> $this->input->post('email'),
+				'password' 			=> $this->input->post('password1'),
+				'group_id' 			=> $this->input->post('group')
 			);
 			
 			//Insert into Articles Table
