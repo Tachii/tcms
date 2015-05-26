@@ -50,8 +50,8 @@
 			<label>User Group</label>
 			<select name="group" class="form-control ">
 				<option selected value="">Select User Group</option>
-				<?php foreach($categories as $category) : ?>
-					<option value="<?php echo $category->id; ?>"><?php echo $category->name ?></option>
+				<?php foreach($groups as $group) : ?>
+					<option value="<?php echo $group->id; ?>"><?php echo $group->name ?></option>
 				<?php endforeach; ?>
 			</select>
 			
