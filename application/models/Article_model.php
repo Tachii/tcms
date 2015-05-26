@@ -31,6 +31,14 @@ class Article_model extends CI_Model {
 	}
 	
 	/**
+	 * Get Filtered Articles
+	 * @param - order_by(string)
+	 * @param - sort(string)
+	 * @param - limit(int)
+	 * @param - offset(int)
+	 */
+	
+	/**
 	 * Get Navbar Items
 	 */
 	public function get_navbar_items(){
