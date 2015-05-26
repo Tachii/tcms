@@ -60,18 +60,6 @@ class Users extends TCMS_Controller {
 	 * @param - id(int)
 	 */
 	public function edit($id){
-		if(is_int($id)){ 
-	        // check record exists in your table 
-			$result = $this->db->get_where('users', array('id' => $id));
-	
-	        // $result will be false if no record found
-	        if(empty($result)){
-	        	$this->session->set_flashdata('article_saved_error','Article with such id doesn\'t exist');
-	            redirect('admin/users');
-	        }
-	    } elseif (empty($id)){
-	        redirect('admin/users');
-	    }
 			
 		//Validation Rules
 		$this->form_validation->set_rules('firstname', 'First Name', 'required|min_length[2]|max_length[15]');
@@ -89,29 +77,35 @@ class Users extends TCMS_Controller {
 		$data['main_content'] = 'admin/users/edit';
 		
 		//Checking if form was validated
-		if($this->form_validation->run() === FALSE){
-			//Views
-			$this->load->view('admin/layouts/main',$data);
+		if(!empty($data['user'])){
+			if($this->form_validation->run() === FALSE){
+				//Views
+				$this->load->view('admin/layouts/main',$data);
+			} else {
+				//Create User Data Array
+				$data = array(
+					'first_name' 		=> $this->input->post('firstname'),
+			        'last_name' 		=> $this->input->post('lastname'),
+					'username' 			=> $this->input->post('username'),
+					'email' 			=> $this->input->post('email'),
+					'password' 			=> $this->encrypt->encode($this->input->post('password1')),
+					'group_id' 			=> $this->input->post('group')
+				);
+				
+				//Insert into Users Table
+				$this->User_model->update($id,$data);
+				
+				//Create Notification
+				$this->session->set_flashdata('user_saved','User has been updated!');
+				
+				//Redirect
+				redirect('admin/users');
+			}
 		} else {
-			//Create Articles Data Array
-			$data = array(
-				'first_name' 		=> $this->input->post('firstname'),
-		        'last_name' 		=> $this->input->post('lastname'),
-				'username' 			=> $this->input->post('username'),
-				'email' 			=> $this->input->post('email'),
-				'password' 			=> $this->encrypt->encode($this->input->post('password1')),
-				'group_id' 			=> $this->input->post('group')
-			);
-			
-			//Insert into Users Table
-			$this->User_model->update($id,$data);
-			
-			//Create Notification
-			$this->session->set_flashdata('user_saved','User has been added!');
-			
 			//Redirect
 			redirect('admin/users');
 		}
+		
 	
 	}
 

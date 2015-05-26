@@ -95,18 +95,6 @@ class Articles extends TCMS_Controller {
 	 * @param - id(int)
 	 */
 	public function edit($id){
-		if(is_int($id)){ 
-	        // check record exists in your table 
-			$result = $this->db->get_where('articles', array('id' => $id));
-	
-	        // $result will be false if no record found
-	        if(empty($result)){
-	        	$this->session->set_flashdata('article_saved_error','Article with such id doesn\'t exist');
-	            redirect('admin/articles');
-	        }
-	    } elseif (empty($id)){
-	        redirect('admin/articles');
-	    }
 		
 		//Form Validation Rules
 		$this->form_validation->set_rules('title','Title','trim|required|min_length[4]|xss_clean');
