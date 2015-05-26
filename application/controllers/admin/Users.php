@@ -69,8 +69,7 @@ class Users extends TCMS_Controller {
 	        	$this->session->set_flashdata('user_saved_error','User with such id doesn\'t exist');
 	            redirect('admin/users');
 	        }
-	    } else{
-	    	$this->session->set_flashdata('user_saved_error','User with such id doesn\'t exist');
+	    } elseif (empty($id)){
 	        redirect('admin/users');
 	    }
 			
