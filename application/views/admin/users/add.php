@@ -26,19 +26,19 @@
 		<div class="form-group">
 			
 			<label>First Name</label>
-			<input type="text" class="form-control" name="firstname" />
+			<input type="text" class="form-control" name="firstname" value="<?php echo set_value('firstname') ?>"/>
 			
 			<br />
 			<label>Last Name</label>
-			<input type="text" class="form-control" name="lastname" />
+			<input type="text" class="form-control" name="lastname" value="<?php echo set_value('lastname') ?>"/>
 			
 			<br />
 			<label>Email</label>
-			<input type="email" class="form-control" name="email" />
+			<input type="email" class="form-control" name="email" value="<?php echo set_value('email') ?>"/>
 			
 			<br />
 			<label>Username</label>
-			<input type="text" class="form-control" name="username" />
+			<input type="text" class="form-control" name="username" value="<?php echo set_value('username') ?>"/>
 			
 			<br />
 			<label>Password</label>
