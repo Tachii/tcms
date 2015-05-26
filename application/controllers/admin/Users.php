@@ -27,6 +27,32 @@ class Users extends TCMS_Controller {
 		$data['groups'] = $this->Group_model->get_groups();
 		$data['main_content'] = 'admin/users/add';
 		$this->load->view('admin/layouts/main',$data);
+		
+		//Checking if form was validated
+		if($this->form_validation->run() === FALSE){
+			//Views
+			$data['main_content'] = 'admin/users/add';
+			$this->load->view('admin/layouts/main',$data);
+		} else {
+			//Create Articles Data Array
+			$data = array(
+				'first_name' 		=> $this->input->post('title'),
+		        'last_name' 		=> $this->input->post('body'),
+				'username' 			=> $this->input->post('category_id'),
+				'email' 			=> $this->input->post('user_id'),
+				'password' 			=> $this->input->post('access'),
+				'group_id' 			=> $this->input->post('is_published')
+			);
+			
+			//Insert into Articles Table
+			$this->User_model->insert($data);
+			
+			//Create Notification
+			$this->session->set_flashdata('user_saved','User has been added!');
+			
+			//Redirect
+			redirect('admin/articles');
+		}
 	
 	}
 	
