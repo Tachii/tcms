@@ -17,7 +17,7 @@ class User_model extends CI_Model {
 	 * 
 	 */
 	public function get_users($order_by=null, $sort='DESC', $limit = null, $offset=0){
-		$this->db->select('users.id, first_name, last_name, username, email, password,group.name AS group_name');
+		$this->db->select('users.id, first_name, last_name, username, email, password,groups.name AS group_name');
 		$this->db->from('users');
 		$this->db->join('groups', 'groups.id=users.group_id', 'INNER');
 		
