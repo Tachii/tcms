@@ -22,6 +22,10 @@ class Users extends TCMS_Controller {
 		$this->form_validation->set_rules('password2', 'Password Confirmation', 'required');
 		$this->form_validation->set_rules('group', 'User Group', 'required');
 		
+		
+		//Load View
+		$data['main_content'] = 'admin/users/add';
+		$this->load->view('admin/layouts/main',$data);
 	
 	}
 	
