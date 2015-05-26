@@ -105,8 +105,6 @@ class Users extends TCMS_Controller {
 			//Redirect
 			redirect('admin/users');
 		}
-		
-	
 	}
 
 	/**
