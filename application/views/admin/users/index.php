@@ -26,6 +26,7 @@
                   <th>Email</th>
                   <th>Password</th>
                   <th>Group</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -40,7 +41,7 @@
 	                  <td>
 	                  	<a href="<?php echo base_url()?>admin/users/edit/<?php echo $user->id; ?>" class="btn btn-primary">Edit</a> 
 	                  	<a href="<?php echo base_url()?>admin/users/delete/<?php echo $user->id; ?>" class="btn btn-danger">Delete</a>
-                  	</td>
+              		  </td>
 	                </tr>
                 <?php endforeach; ?>
               </tbody>
