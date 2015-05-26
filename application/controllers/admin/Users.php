@@ -60,20 +60,19 @@ class Users extends TCMS_Controller {
 	 * @param - id(int)
 	 */
 	public function edit($id){
-		if(is_int($id) && $id)
-	    { 
+		if(is_int($id)){ 
 	        // check record exists in your table 
 	        $result = $this->db->get_where('users',array('id'=>$id));
 	
 	        // $result will be false if no record found
-	        if(empty($result))
-	        {
+	        if(empty($result)){
 	        	$this->session->set_flashdata('user_saved_error','User with such id doesn\'t exist');
 	            redirect('admin/users');
 	        }
+	    } else{
+	    	$this->session->set_flashdata('user_saved_error','User with such id doesn\'t exist');
+	        redirect('admin/users');
 	    }
-		
-		die(var_dump($result));
 			
 		//Validation Rules
 		$this->form_validation->set_rules('firstname', 'First Name', 'required|min_length[2]|max_length[15]');
