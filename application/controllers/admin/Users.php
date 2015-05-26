@@ -61,6 +61,11 @@ class Users extends TCMS_Controller {
 	 */
 	public function edit($id){
 		
+		if(empty($id)){
+			$this->session->set_flashdata('user_saved_error','User with such id doesn\'t exist');
+			redirect('admin/users');
+		}
+		
 		//Validation Rules
 		$this->form_validation->set_rules('firstname', 'First Name', 'required|min_length[2]|max_length[15]');
 		$this->form_validation->set_rules('lastname', 'Last Name', 'required|min_length[2]|max_length[15]');
