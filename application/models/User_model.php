@@ -34,6 +34,20 @@ class User_model extends CI_Model {
 	}
 	
 	/**
+	 * Get Single User
+	 * @param - id(int)
+	 */
+	public function get_single_user($id){
+		$this->db->select('*');
+		$this->db->from('users');
+		$this->db->where('id',$id);
+		
+		$query=$this->db->get();
+		$user=$query->result();
+		return $user;
+	}
+	
+	/**
 	 * Insert Article
 	 * @param data(array)
 	 */
