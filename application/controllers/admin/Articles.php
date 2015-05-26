@@ -57,7 +57,7 @@ class Articles extends TCMS_Controller {
 		
 		$data['categories'] = $this->Categories_model->get_categories();
 		$data['users'] = $this->User_model->get_users();
-		$data['groups'] = $this->Groups_model->get_groups();
+		$data['groups'] = $this->Group_model->get_groups();
 		
 		//Checking if form was validated
 		if($this->form_validation->run() === FALSE){
@@ -107,7 +107,7 @@ class Articles extends TCMS_Controller {
 		
 		$data['categories'] = $this->Categories_model->get_categories();
 		$data['users'] = $this->User_model->get_users();
-		$data['groups'] = $this->Groups_model->get_groups();
+		$data['groups'] = $this->Group_model->get_groups();
 		$data['article'] = $this->Article_model->get_single_article($id);
 		
 		if(!empty($data['article'])){
