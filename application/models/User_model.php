@@ -38,12 +38,9 @@ class User_model extends CI_Model {
 	 * @param - id(int)
 	 */
 	public function get_single_user($id){
-		$this->db->select('*');
-		$this->db->from('users');
 		$this->db->where('id',$id);
-		
-		$query=$this->db->get();
-		$user=$query->result();
+		$query = $this->db->get('users');
+		$user = $query->row();
 		return $user;
 	}
 	
