@@ -7,12 +7,12 @@
 		<div class="col-lg-12">
 			<ol class="breadcrumb">
 				<li>
-					<a href="#">
+					<a href="<?php echo base_url() ?>/admin/dashobard">
 						Dashboard
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<?php echo base_url() ?>/admin/users">
 						Users
 					</a>
 				</li>
@@ -49,8 +49,9 @@
 			<br />
 			<label>User Group</label>
 			<select name="group" class="form-control ">
-				<option>User</option>
-				<option>Admin</option>
+				<option selected value="">Select User Group</option>
+				<?php foreach($categories as $category) : ?>
+					<option value="<?php echo $category->id; ?>"><?php echo $category->name ?></option>
 			</select>
 			
 		</div>
