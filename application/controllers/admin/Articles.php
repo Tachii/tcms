@@ -4,7 +4,7 @@ class Articles extends TCMS_Controller {
 	public function index(){
 		if(!empty($this->input->post('keywords'))){
 			//Get filtered Articles
-			$data['articles'] = $this->Article_model->get_filtered_articles('id','DESC',10);
+			$data['articles'] = $this->Article_model->get_filtered_articles($this->input->post('keywords'));
 		} else {
 			//Get just all the articles(or limited number)
 			$data['articles'] = $this->Article_model->get_articles('id','DESC',10);
