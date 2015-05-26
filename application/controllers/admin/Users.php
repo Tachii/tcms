@@ -62,7 +62,7 @@ class Users extends TCMS_Controller {
 	public function edit($id){
 		if(is_int($id)){ 
 	        // check record exists in your table 
-	        $result = $this->db->get_where('users',array('id'=>$id));
+			$result = $this->db->get_where('users', array('id' => $id));
 	
 	        // $result will be false if no record found
 	        if(empty($result)){
