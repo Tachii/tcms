@@ -17,9 +17,11 @@ class User_model extends CI_Model {
 	 * 
 	 */
 	public function get_users($order_by=null, $sort='DESC', $limit = null, $offset=0){
-		$this->db->select('*');
+		$this->db->select('users.*,group.name AS group_name');
 		$this->db->from('users');
-		$this->db->join('groups', 'groups.id = users.group_id');
+		$this->db->join('groups','groups.id = users.group_id');
+		
+		
 		if($limit != null){
 			$this->db->limit($limit, $offset);
 		}
