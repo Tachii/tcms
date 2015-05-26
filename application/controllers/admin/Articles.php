@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Articles extends TCMS_Controller {
 	public function index(){
+		if(!empty($this->input->post('keywords'))){
+			
+		} else {
+			$data['articles'] = $this->Article_model->get_articles('id','DESC',10);
+		}
+		
 		//Get Articles
 		$data['articles'] = $this->Article_model->get_articles('id','DESC','10');
 		
