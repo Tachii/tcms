@@ -118,7 +118,6 @@ class Users extends TCMS_Controller {
 			redirect('admin/users');
 		} else {
 			//Create Message
-			$this->session->set_flashdata('user_deleted_error', 'User has not been deleted');
 			redirect('admin/users');
 		}
 		
