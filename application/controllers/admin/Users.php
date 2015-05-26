@@ -24,6 +24,7 @@ class Users extends TCMS_Controller {
 		
 		
 		//Load View
+		$data['groups'] = $this->Group_model->get_groups();
 		$data['main_content'] = 'admin/users/add';
 		$this->load->view('admin/layouts/main',$data);
 	
