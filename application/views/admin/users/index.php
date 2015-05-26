@@ -7,12 +7,12 @@
 		<div class="col-lg-12">
 			<ol class="breadcrumb">
 				<li>
-					<a href="<?php echo base_url() ?>/admin/dashobard">
+					<a href="<?php echo base_url() ?>admin/dashboard">
 						Dashboard
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo base_url() ?>/admin/users">
+					<a href="<?php echo base_url() ?>admin/users">
 						Users
 					</a>
 				</li>
