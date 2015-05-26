@@ -4,7 +4,7 @@ class Articles extends TCMS_Controller {
 	public function index(){
 		if(!empty($this->input->post('keywords'))){
 			//Get filtered Articles
-			die();
+			die(var_dump(this->input->post('keywords')));
 			$data['articles'] = $this->Article_model->get_filtered_articles($this->input->post('keywords'));
 			
 		} else {
