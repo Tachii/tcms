@@ -1,4 +1,4 @@
-<form>
+<form method="post" action="<?php echo base_url() ?>admin/users/add">
 	<div class="row">	
       <div class="col-md-6">
       	<h1 class="sub-header">Add User</h1>
