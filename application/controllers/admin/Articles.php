@@ -135,11 +135,8 @@ class Articles extends TCMS_Controller {
 				redirect('admin/articles');
 			}
 		} else {
-			$this->session->set_flashdata('article_saved_error','Your article was not saved');
 			redirect('admin/articles');
-			
 		}
-		
 	}
 
 	/**
