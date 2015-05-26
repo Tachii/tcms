@@ -46,7 +46,7 @@ class User_model extends CI_Model {
 	
 	/**
 	 * Insert User
-	 * @param data(array)
+	 * @param - data(array)
 	 */
 	public function insert($data){
 		if($this->db->insert('users',$data)){
@@ -58,10 +58,25 @@ class User_model extends CI_Model {
 	
 	/**
 	 * Edit User
+	 * @param - id(int)
+	 * @param - data(array)
 	 */
 	public function edit($id, $data){
 		$this->db->where('id', $id);
 		if($this->db->update('users',$data)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Delete User
+	 * @param - id(int)
+	 */
+	public function delete($id){
+		$this->db->where('id', $id);
+		if($this->db->delete('users')){
 			return true;
 		} else {
 			return false;
