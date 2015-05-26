@@ -66,7 +66,7 @@ class Users extends TCMS_Controller {
 	        $result = $this->db->get_where('users',array('id'=>$id));
 	
 	        // $result will be false if no record found
-	        if(!$result)
+	        if(empty($result))
 	        {
 	        	$this->session->set_flashdata('user_saved_error','User with such id doesn\'t exist');
 	            redirect('admin/articles');
