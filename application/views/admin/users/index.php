@@ -6,18 +6,6 @@
 	if($this->session->flashdata('user_saved_error')){
 		echo ('<p class="alert alert-danger">'.$this->session->flashdata('user_saved_error')."</p>");
 	}
-	if($this->session->flashdata('user_published')){
-		echo '<p class="alert alert-success">'.$this->session->flashdata('user_published')."</p>";
-	}
-	if($this->session->flashdata('user_published_error')){
-		echo '<p class="alert alert-danger">'.$this->session->flashdata('user_published_error')."</p>";
-	}
-	if($this->session->flashdata('user_unpublished')){
-		echo '<p class="alert alert-success">'.$this->session->flashdata('user_unpublished')."</p>";
-	}
-	if($this->session->flashdata('user_unpublished_error')){
-		echo '<p class="alert alert-danger">'.$this->session->flashdata('user_unpublished_error')."</p>";
-	}
 	if($this->session->flashdata('user_deleted')){
 		echo '<p class="alert alert-success">'.$this->session->flashdata('user_deleted')."</p>";
 	}
@@ -37,7 +25,6 @@
                   <th>Username</th>
                   <th>Email</th>
                   <th>Password</th>
-                  <th>Group ID</th>
                   <th>Group</th>
                 </tr>
               </thead>
@@ -46,13 +33,12 @@
                 	<tr>
 	                  <td><?php echo $user->id ?></td>
 	                  <td><?php echo $user->first_name ?></td>
+	                  <td><?php echo $user->last_name ?></td>
+	                  <td><?php echo $user->username ?></td>
+	                  <td><?php echo $user->email ?></td>
+	                  <td><?php echo $user->group?></td>
 	                  <td>
 	                  	<a href="<?php echo base_url()?>admin/users/edit/<?php echo $user->id; ?>" class="btn btn-primary">Edit</a> 
-	                  	<?php if($user->is_published == 1): ?>
-	                  		<a href="<?php echo base_url()?>admin/users/unpublish/<?php echo $user->id; ?>" class="btn btn-warning">Unpublish</a> 
-	                  	<?php else: ?>
-	                  		<a href="<?php echo base_url()?>admin/users/publish/<?php echo $user->id; ?>" class="btn btn-success">Publish</a> 
-                  		<?php endif; ?>
 	                  	<a href="<?php echo base_url()?>admin/users/delete/<?php echo $user->id; ?>" class="btn btn-danger">Delete</a>
                   	</td>
 	                </tr>
