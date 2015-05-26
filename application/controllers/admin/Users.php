@@ -107,5 +107,23 @@ class Users extends TCMS_Controller {
 		}
 	
 	}
+
+	/**
+	 * Delete User
+	 * @param - id(int)
+	 */
+	public function delete($id){
+		if($this->User_model->delete($id)){
+			//Create Message
+			$this->session->set_flashdata('user_deleted', 'User has been deleted');
+			redirect('admin/users');
+		} else {
+			//Create Message
+			$this->session->set_flashdata('user_deleted_error', 'User has not been deleted');
+			redirect('admin/users');
+		}
+		
+		
+	}
 	
 }
