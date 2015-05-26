@@ -26,12 +26,10 @@ class Users extends TCMS_Controller {
 		//Load View
 		$data['groups'] = $this->Group_model->get_groups();
 		$data['main_content'] = 'admin/users/add';
-		$this->load->view('admin/layouts/main',$data);
 		
 		//Checking if form was validated
 		if($this->form_validation->run() === FALSE){
 			//Views
-			$data['main_content'] = 'admin/users/add';
 			$this->load->view('admin/layouts/main',$data);
 		} else {
 			//Create Articles Data Array
@@ -51,7 +49,7 @@ class Users extends TCMS_Controller {
 			$this->session->set_flashdata('user_saved','User has been added!');
 			
 			//Redirect
-			redirect('admin/articles');
+			redirect('admin/users');
 		}
 	
 	}
