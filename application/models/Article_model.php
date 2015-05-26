@@ -43,6 +43,8 @@ class Article_model extends CI_Model {
 		$this->db->select('article.*,category.name as category_name, user.first_name, user.last_name, user.username');
 		$this->db->join('categories AS category', 'category.id = article.category_id','left');
 		$this->db->join('users AS user','user.id=article.user_id','left');
+		
+		//Search
 		$this->db->like('title',$keywords);
 		$this->db->or_like('body',$keywords);
 		
