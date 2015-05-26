@@ -3,8 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Articles extends TCMS_Controller {
 	public function index(){
 		if(!empty($this->input->post('keywords'))){
-			
+			//Get filtered Articles
+			$data['articles'] = $this->Article_model->get_filtered_articles('id','DESC',10);
 		} else {
+			//Get just all the articles(or limited number)
 			$data['articles'] = $this->Article_model->get_articles('id','DESC',10);
 		}
 		
