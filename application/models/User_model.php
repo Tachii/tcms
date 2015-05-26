@@ -45,11 +45,23 @@ class User_model extends CI_Model {
 	}
 	
 	/**
-	 * Insert Article
+	 * Insert User
 	 * @param data(array)
 	 */
 	public function insert($data){
 		if($this->db->insert('users',$data)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	/**
+	 * Edit User
+	 */
+	public function edit($id, $data){
+		$this->db->where('id', $id);
+		if($this->db->update('users',$data)){
 			return true;
 		} else {
 			return false;
