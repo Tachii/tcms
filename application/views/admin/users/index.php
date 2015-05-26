@@ -38,7 +38,7 @@
 	                  <td><?php echo $user->username ?></td>
 	                  <td><?php echo $user->email ?></td>
 	                  <td><?php echo $user->password ?></td>
-	                  <td><?php echo $user->group?></td>
+	                  <td><?php echo $user->group_name?></td>
 	                  <td>
 	                  	<a href="<?php echo base_url()?>admin/users/edit/<?php echo $user->id; ?>" class="btn btn-primary">Edit</a> 
 	                  	<a href="<?php echo base_url()?>admin/users/delete/<?php echo $user->id; ?>" class="btn btn-danger">Delete</a>
