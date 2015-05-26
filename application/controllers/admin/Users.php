@@ -38,7 +38,7 @@ class Users extends TCMS_Controller {
 		        'last_name' 		=> $this->input->post('lastname'),
 				'username' 			=> $this->input->post('username'),
 				'email' 			=> $this->input->post('email'),
-				'password' 			=> $encrypted_string = $this->encrypt->encode($this->input->post('password1')),
+				'password' 			=> $this->encrypt->encode($this->input->post('password1')),
 				'group_id' 			=> $this->input->post('group')
 			);
 			
