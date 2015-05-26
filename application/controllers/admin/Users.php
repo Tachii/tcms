@@ -14,7 +14,7 @@ class Users extends TCMS_Controller {
 	public function add(){
 		
 		//Validation Rules
-		$this->form_validation->set_rules('firsname', 'First Name', 'required|min_length[2]|max_length[15]');
+		$this->form_validation->set_rules('firstname', 'First Name', 'required|min_length[2]|max_length[15]');
 		$this->form_validation->set_rules('lastname', 'Last Name', 'required|min_length[2]|max_length[15]');
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]');
 		$this->form_validation->set_rules('username', 'Username', 'required|min_length[4]|max_length[12]|is_unique[users.username]');
