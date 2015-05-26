@@ -32,5 +32,17 @@ class User_model extends CI_Model {
 		$users=$query->result();
 		return $users;
 	}
+	
+	/**
+	 * Insert Article
+	 * @param data(array)
+	 */
+	public function insert($data){
+		if($this->db->insert('users',$data)){
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 ?>

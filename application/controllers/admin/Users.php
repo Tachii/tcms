@@ -42,7 +42,7 @@ class Users extends TCMS_Controller {
 				'group_id' 			=> $this->input->post('group')
 			);
 			
-			//Insert into Articles Table
+			//Insert into Users Table
 			$this->User_model->insert($data);
 			
 			//Create Notification
