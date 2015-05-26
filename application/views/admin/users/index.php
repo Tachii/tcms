@@ -13,7 +13,7 @@
 		echo '<p class="alert alert-danger">'.$this->session->flashdata('user_deleted_error')."</p>";
 	}
 ?>
-<h1 class="sub-header">users</h2>
+<h1 class="sub-header">Users</h2>
       	  <a href="<?php echo base_url() ?>admin/users/add" class="btn btn-success pull-right">Add user</a><br /><br />
           <div class="table-responsive">
             <table class="table table-striped">
