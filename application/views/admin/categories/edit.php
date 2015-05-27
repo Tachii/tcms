@@ -3,7 +3,7 @@
 <form method="post" action="<?php echo base_url() ?>admin/categories/edit/<?php echo $category->id ?>"?>>
 	<div class="row">	
 	  <div class="col-md-6">
-	  	<h1 class="sub-header">Add Category</h1>
+	  	<h1 class="sub-header">Edit Category</h1>
 	  </div>
 	</div>
 			<ol class="breadcrumb">
@@ -18,7 +18,7 @@
 					</a>
 				</li>
 				<li>
-					Add Category
+					Edit Category
 				</li>
 			</ol>
 			
