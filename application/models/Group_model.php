@@ -49,7 +49,7 @@ class Group_model extends CI_Model {
 	 */
 	public function update($id,$data){
 		$this->db->where('id', $id);
-		if($this->db->update('categories',$data)){
+		if($this->db->update('groups',$data)){
 			return true;
 		} else {
 			return false;

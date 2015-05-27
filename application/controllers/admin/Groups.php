@@ -50,7 +50,6 @@ class Groups extends TCMS_Controller{
 	 */
 	public function edit($id){
 		if(empty($id)){
-			$this->session->set_flashdata('group_saved_error','group with such id doesn\'t exist');
 			redirect('admin/groups');
 		}
 		
