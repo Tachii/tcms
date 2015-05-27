@@ -10,7 +10,9 @@ class Users extends TCMS_Controller {
 		$data['main_content'] = 'admin/users/index';
 		$this->load->view('admin/layouts/main',$data);
 	}
-	
+	/**
+	 * Add new User
+	 */
 	public function add(){
 		
 		//Validation Rules
