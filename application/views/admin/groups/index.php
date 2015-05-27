@@ -13,7 +13,7 @@
 		echo '<p class="alert alert-danger">'.$this->session->flashdata('group_deleted_error')."</p>";
 	}
 ?>
-<h1 class="sub-header">groups</h2>
+<h1 class="sub-header">Groups</h2>
       	  <a href="<?php echo base_url() ?>admin/groups/add" class="btn btn-success pull-right">Add Group</a><br /><br />
           <div class="table-responsive">
           			<table class="table table-striped">
