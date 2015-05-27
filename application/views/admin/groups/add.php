@@ -24,7 +24,7 @@
 			
 			<div class="form-group col-xs-3">
 				<label>Group Name</label>
-				<input type="text" class="form-control" name="name" value="<?php echo set_value('name'); ?>" placeholder="Enter Category Name" />
+				<input type="text" class="form-control" name="name" value="<?php echo set_value('name'); ?>" placeholder="Enter group Name" />
 				<br />
 				<div class="btn-group pull-left">
 		  			<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Add" />
