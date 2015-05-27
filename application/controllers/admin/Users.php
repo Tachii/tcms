@@ -95,7 +95,7 @@ class Users extends TCMS_Controller {
 				);
 				
 				//Insert into Users Table
-				$this->User_model->update($id,$data);
+				$this->User_model->edit($id,$data);
 				
 				//Create Notification
 				$this->session->set_flashdata('user_saved','User has been updated!');
