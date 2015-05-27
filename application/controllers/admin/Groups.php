@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Groups extends TCMS_Controller{
 	public function index(){
 		//Get Categoires
-		$data['groups'] = $this->Groups_model->get_groups();
+		$data['groups'] = $this->Group_model->get_groups();
 		
 		//Loading Views
 		$data['main_content'] = 'admin/groups/index';
@@ -27,7 +27,7 @@ class Groups extends TCMS_Controller{
 			$data =  array('name' => $this->input->post('name'));
 			
 			//Insert data into groups Table
-			if($this->Groups_model->insert($data)){
+			if($this->Group_model->insert($data)){
 				
 				//Create Notification
 				$this->session->set_flashdata('group_saved','New Group Was Added');
@@ -55,7 +55,7 @@ class Groups extends TCMS_Controller{
 		}
 		
 		//To display data in form
-		$data['group'] = $this->Groups_model->get_single_group($id);
+		$data['group'] = $this->Group_model->get_single_group($id);
 		
 		//Validation Rules
 		$this->form_validation->set_rules('name','group','trim|required|min_length[4]|xss_clean');
@@ -71,7 +71,7 @@ class Groups extends TCMS_Controller{
 				$data =  array('name' => $this->input->post('name'));
 				
 				//Insert data into groups Table
-				if($this->Groups_model->update($id,$data)){
+				if($this->Group_model->update($id,$data)){
 					
 					//Create Notification
 					$this->session->set_flashdata('group_saved','Group was saved!');
@@ -99,7 +99,7 @@ class Groups extends TCMS_Controller{
 	 */
 	public function delete($id){
 		
-		if($this->Groups_model->delete($id)){
+		if($this->Group_model->delete($id)){
 			//Create Message & Redirect
 			$this->session->set_flashdata('group_deleted', 'Group has been deleted');
 			redirect('admin/groups');
