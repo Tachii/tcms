@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Groups extends TCMS_Controller{
 	public function index(){
 		//Get Categoires
-		$data['groups'] = $this->Groups_model->get_groups('id','DESC');
+		$data['groups'] = $this->Groups_model->get_groups();
 		
 		//Loading Views
 		$data['main_content'] = 'admin/groups/index';
