@@ -19,7 +19,7 @@
           			<table class="table table-striped">
 	          			<thead>
 	          				<tr>
-	          					<th width="70">#</th>
+	          					<th width="70">ID</th>
 	          					<th>Name</th>
 	          					<th>Actions</th>
 	          				</tr>
