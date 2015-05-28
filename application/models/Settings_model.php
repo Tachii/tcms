@@ -22,5 +22,19 @@ class Settings_model extends CI_Model {
 		$setting = $query->row();
 		return $setting;
 	}
+	
+	/**
+	 * Edit Category
+	 * @param - id(int)
+	 * @param - data(array)
+	 */
+	public function update($id,$data){
+		$this->db->where('id', $id);
+		if($this->db->update('settings',$data)){
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 ?>
