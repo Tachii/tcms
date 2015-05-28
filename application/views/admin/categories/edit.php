@@ -1,5 +1,3 @@
-<!-- Display Validation errors -->
-<?php echo validation_errors('<p class="alert alert-dismissable alert-danger">'); ?>
 <form method="post" action="<?php echo base_url() ?>admin/categories/edit/<?php echo $category->id ?>"?>
 	<div class="row">	
 	  <div class="col-md-6">
@@ -21,7 +19,9 @@
 					Edit Category
 				</li>
 			</ol>
-			
+			<!-- Display Validation errors -->
+			<?php echo validation_errors('<p class="alert alert-dismissable alert-danger">'); ?>
+
 			<div class="form-group col-xs-3">
 				<label>Category Name</label>
 				<input type="text" class="form-control" name="name" value="<?php echo $category->name; ?>" placeholder="Enter Category Name" />
