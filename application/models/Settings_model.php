@@ -19,7 +19,7 @@ class Settings_model extends CI_Model {
 	public function get_single_setting($id){
 		$this->db->where('id',$id);
 		$query = $this->db->get('settings');
-		$category = $query->row();
+		$setting = $query->row();
 		return $setting;
 	}
 }
