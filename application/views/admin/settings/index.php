@@ -33,7 +33,7 @@
 	          							<?php if($setting->key != 'logo') : ?>
 	          								<a href="<?php echo base_url()."admin/settings/edit/".$setting->id; ?>" class="btn btn-primary">Edit</a> 
 	          							<?php else : ?>
-	          								<a href="<?php echo base_url()."admin/settings/upload" ?> class="btn btn-primary">Edit</a> 
+	          								<a href="<?php echo base_url()."admin/settings/upload" ?>" class="btn btn-primary">Edit</a> 
 	          							<?php endif; ?>
 	          							<a href="<?php echo base_url()."admin/settings/delete/".$setting->id; ?>" class="btn btn-danger">Delete</a>
           							</td>
