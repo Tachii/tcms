@@ -24,7 +24,7 @@
 			
 			<div class="form-group col-xs-3">
 				<label>Setting Content</label>
-				<input type="text" class="form-control" name="name" value="<?php echo $setting->value; ?>" placeholder="Enter Setting Value" />
+				<input type="text" class="form-control" name="value" value="<?php echo $setting->value; ?>" placeholder="Enter Setting Value" />
 				<br />
 				<div class="btn-group pull-left">
 		  			<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Save">
