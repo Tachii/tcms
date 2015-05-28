@@ -36,7 +36,7 @@ class Settings extends TCMS_controller{
 				$data =  array('value' => $this->input->post('value'));
 				
 				//Insert data into settings Table
-				if($this->settings_model->update($id,$data)){
+				if($this->Settings_model->update($id,$data)){
 					
 					//Create Notification
 					$this->session->set_flashdata('setting_saved','Your setting was saved!');
