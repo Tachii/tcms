@@ -1,4 +1,3 @@
-<?php var_dump($error); ?>
 <div class="row">	
   <div class="col-md-6">
   	<h1 class="sub-header">Upload Logo</h1>
