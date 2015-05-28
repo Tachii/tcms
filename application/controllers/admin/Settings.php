@@ -23,7 +23,7 @@ class Settings extends TCMS_controller{
 		$data['setting'] = $this->Settings_model->get_single_setting($id);
 		
 		//Validation Rules
-		$this->form_validation->set_rules('name','setting','trim|required|min_length[4]|xss_clean');
+		$this->form_validation->set_rules('value','Value','trim|required|min_length[4]|xss_clean');
 		
 		if(!empty($data['setting'])){
 			//Checking if form was validated
