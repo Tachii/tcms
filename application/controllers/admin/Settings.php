@@ -64,25 +64,29 @@ class Settings extends TCMS_controller{
 	 */
 	public function do_upload()
 	{
-		$config['upload_path'] = './uploads/';
+		$data['main_content'] = 'admin/settings/index';
+		$this->load->view('admin/layouts/main',$data);
+		
+		$config['upload_path'] = base_url().'assets/img/';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '100';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
+		
+		$this->upload->initialize($config);
 
-		$this->load->library('upload', $config);
 
 		if ( ! $this->upload->do_upload())
 		{
 			$error = array('error' => $this->upload->display_errors());
-
-			$this->load->view('upload_form', $error);
+			redirect('admin/settings');
 		}
 		else
 		{
 			$data = array('upload_data' => $this->upload->data());
 
-			$this->load->view('upload_success', $data);
+			//$this->load->view('upload_success', $data);
+			redirect('admin/settings');
 		}
 	}
 }
