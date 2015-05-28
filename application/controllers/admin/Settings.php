@@ -79,12 +79,10 @@ class Settings extends TCMS_controller{
 		if ( ! $this->upload->do_upload())
 		{
 			$data['error'] = array('error' => $this->upload->display_errors());
-			$this->load->view('admin/layouts/main',$data);
 		}
 		else
 		{
 			$data = array('upload_data' => $this->upload->data());
-			
 			$data['main_content'] = 'admin/settings/upload';
 			$this->load->view('admin/layouts/main',$data);
 		}
