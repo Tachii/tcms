@@ -1,9 +1,9 @@
 <!-- Display Validation errors -->
 <?php echo validation_errors('<p class="alert alert-dismissable alert-danger">'); ?>
-<form method="post" action="<?php echo base_url() ?>admin/settings/edit/<?php echo $setting->id ?>"?>>
+<form method="post" action="<?php echo base_url() ?>admin/settings/edit/<?php echo $setting->id ?>"?>
 	<div class="row">	
 	  <div class="col-md-6">
-	  	<h1 class="sub-header">Edit Category</h1>
+	  	<h1 class="sub-header">Edit <?php echo $setting->key; ?></h1>
 	  </div>
 	</div>
 			<ol class="breadcrumb">
@@ -18,7 +18,7 @@
 					</a>
 				</li>
 				<li>
-					Edit <b><?php echo $setting->key; ?></b>
+					Edit 
 				</li>
 			</ol>
 			
