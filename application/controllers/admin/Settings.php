@@ -65,7 +65,7 @@ class Settings extends TCMS_controller{
 	{
 		$data['error'] = '';
 		
-		$config['upload_path'] = base_url().'assets/img/';
+		$config['upload_path'] = './assets/img';
 		$config['allowed_types'] = 'png';
 		$config['max_size']	= '100';
 		$config['max_width']  = '1024';
