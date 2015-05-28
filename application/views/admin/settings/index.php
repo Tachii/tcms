@@ -34,7 +34,6 @@
 	          							<?php else : ?>
 	          								<a href="<?php echo base_url()."admin/settings/upload" ?>" class="btn btn-primary">Edit</a> 
 	          							<?php endif; ?>
-	          							<a href="<?php echo base_url()."admin/settings/delete/".$setting->id; ?>" class="btn btn-danger">Delete</a>
           							</td>
 		          				</tr>
 	          				<?php endforeach; ?>
