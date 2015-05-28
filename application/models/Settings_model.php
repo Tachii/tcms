@@ -13,5 +13,14 @@ class Settings_model extends CI_Model {
 		return $settings;
 	}
 	
+	/** Get single setting
+	 *@param - id(int)
+	 */
+	public function get_single_setting($id){
+		$this->db->where('id',$id);
+		$query = $this->db->get('settings');
+		$category = $query->row();
+		return $setting;
+	}
 }
 ?>

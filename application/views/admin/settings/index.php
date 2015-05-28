@@ -14,8 +14,7 @@
 	}
 ?>
 <h1 class="sub-header">Settings</h2>
-      	  <a href="<?php echo base_url() ?>admin/settings/add" class="btn btn-success pull-right">Add setting</a><br /><br />
-          <div class="table-responsive">
+      	<div class="table-responsive">
           			<table class="table table-striped">
 	          			<thead>
 	          				<tr>
