@@ -1,5 +1,4 @@
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-	<form>
+<form>
     	<div class="row">	
 	      <div class="col-md-6">
 	      	<h1 class="sub-header">Settings</h1>
@@ -26,4 +25,3 @@
 	      		<a href="#" class="btn btn-default">Close</a>
 	      	</div>
 	</form>
-</div>
