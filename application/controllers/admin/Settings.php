@@ -76,7 +76,7 @@ class Settings extends TCMS_controller{
 		$this->upload->initialize($config);
 
 
-		if ( ! $this->upload->do_upload())
+		if ( ! $this->upload->upload())
 		{
 			$error = array('error' => $this->upload->display_errors());
 
