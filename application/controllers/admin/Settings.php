@@ -60,7 +60,6 @@ class Settings extends TCMS_controller{
 
 	/**
 	 * Upload Logo Image
-	 * @param 
 	 */
 	public function upload()
 	{
