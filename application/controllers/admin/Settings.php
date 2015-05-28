@@ -64,7 +64,6 @@ class Settings extends TCMS_controller{
 	public function upload()
 	{
 		$data['error'] = '';
-		$this->load->view('admin/layouts/main',$data);
 		
 		$config['upload_path'] = base_url().'assets/img/';
 		$config['allowed_types'] = 'gif|jpg|png';
@@ -78,7 +77,7 @@ class Settings extends TCMS_controller{
 		if ( ! $this->upload->do_upload())
 		{
 			$data['error'] = $this->upload->display_errors();
-			$data['main_content'] = 'admin/settings/index';
+			$data['main_content'] = 'admin/settings/edit';
 			$this->load->view('admin/layouts/main',$data);
 		}
 		else
