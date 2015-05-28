@@ -1,27 +1,37 @@
-<form>
-    	<div class="row">	
-	      <div class="col-md-6">
-	      	<h1 class="sub-header">Settings</h1>
-	      </div>
-    	</div>
-    			<ol class="breadcrumb">
-    				<li>
-    					<a href="#">
-    						Dashboard
-    					</a>
-    				</li>
-    				<li>
-						Settings
-    				</li>
-    			</ol>
-    		<div class="form-group">
-    			<label>Jumbotron Title</label>
-    			<input type="text" class="form-control" name="jtitle" />
-    			<label>Jumbotron Text</label>
-    			<textarea class="form-control" name="jtext" rows="10"> </textarea>
-    		</div>
-	      	<div class="btn-group pull-left">
-	      		<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Save" />
-	      		<a href="#" class="btn btn-default">Close</a>
-	      	</div>
-	</form>
+<!-- Display Notification Message -->
+<?php
+	if($this->session->flashdata('setting_saved')){
+		echo ('<p class="alert alert-success">'.$this->session->flashdata('setting_saved')."</p>");
+	}
+	if($this->session->flashdata('setting_saved_error')){
+		echo ('<p class="alert alert-danger">'.$this->session->flashdata('setting_saved_error')."</p>");
+	}
+	if($this->session->flashdata('setting_deleted')){
+		echo '<p class="alert alert-success">'.$this->session->flashdata('setting_deleted')."</p>";
+	}
+	if($this->session->flashdata('setting_deleted_error')){
+		echo '<p class="alert alert-danger">'.$this->session->flashdata('setting_deleted_error')."</p>";
+	}
+?>
+<h1 class="sub-header">Settings</h2>
+      	  <a href="<?php echo base_url() ?>admin/settings/add" class="btn btn-success pull-right">Add setting</a><br /><br />
+          <div class="table-responsive">
+          			<table class="table table-striped">
+	          			<thead>
+	          				<tr>
+	          					<th width="70">ID</th>
+	          					<th>Name</th>
+	          					<th>Actions</th>
+	          				</tr>
+	          			</thead>
+	          			<tbody>
+	          				<?php foreach($settings as $setting): ?>
+		          				<tr>
+		          					<td><?php echo $setting->id; ?></td>
+	          						<td><?php echo $setting->name; ?></td>
+	          						<td><a href="<?php echo base_url()."admin/settings/edit/".$setting->id; ?>" class="btn btn-primary">Edit</a> <a href="<?php echo base_url()."admin/settings/delete/".$setting->id; ?>" class="btn btn-danger">Delete</a></td>
+		          				</tr>
+	          				<?php endforeach; ?>
+	          			</tbody>
+          			</table>
+          		</div>
