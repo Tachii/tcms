@@ -18,7 +18,9 @@
 		Upload Logo 
 	</li>
 </ol>
-<?php echo "<p class='alert alert-dismissable alert-danger'>123</p>"; ?>
+<?php
+	if(!empty($error)) echo "<p class='alert alert-dismissable alert-danger'>".$error."</p>"; 
+?>
 <?php echo form_open_multipart('admin/settings/upload');?>
 
 <input type="file" name="userfile" size="20" />
