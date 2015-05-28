@@ -28,7 +28,7 @@
 	          				<?php foreach($settings as $setting): ?>
 		          				<tr>
 		          					<td><?php echo $setting->id; ?></td>
-	          						<td><?php echo $setting->name; ?></td>
+	          						<td><?php echo $setting->key; ?></td>
 	          						<td><a href="<?php echo base_url()."admin/settings/edit/".$setting->id; ?>" class="btn btn-primary">Edit</a> <a href="<?php echo base_url()."admin/settings/delete/".$setting->id; ?>" class="btn btn-danger">Delete</a></td>
 		          				</tr>
 	          				<?php endforeach; ?>
