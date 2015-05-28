@@ -63,7 +63,7 @@ class Settings extends TCMS_controller{
 	 */
 	public function upload()
 	{
-		$data['error'] = '';
+		$data['error'] = ' ';
 		
 		$config['upload_path'] = './assets/img';
 		$config['allowed_types'] = 'png';
@@ -84,9 +84,11 @@ class Settings extends TCMS_controller{
 		}
 		else
 		{
-			$data = array('upload_data' => $this->upload->data());
-			$data['main_content'] = 'admin/settings/upload';
-			$this->load->view('admin/layouts/main',$data);
+			//Create Notification
+			$this->session->set_flashdata('setting_saved','Logo was uploaded!');
+			
+			//Redirect
+			redirect('admin/settings');
 		}
 	}
 }
