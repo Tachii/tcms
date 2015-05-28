@@ -62,9 +62,9 @@ class Settings extends TCMS_controller{
 	 * Upload Logo Image
 	 * @param 
 	 */
-	public function do_upload()
+	public function upload()
 	{
-		$data['main_content'] = 'admin/settings/index';
+		$data['main_content'] = 'admin/settings/upload';
 		$this->load->view('admin/layouts/main',$data);
 		
 		$config['upload_path'] = base_url().'assets/img/';
