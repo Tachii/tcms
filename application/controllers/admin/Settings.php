@@ -66,10 +66,12 @@ class Settings extends TCMS_controller{
 		$data['error'] = '';
 		
 		$config['upload_path'] = base_url().'assets/img/';
-		$config['allowed_types'] = 'gif|jpg|png';
+		$config['allowed_types'] = 'png';
 		$config['max_size']	= '100';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
+		$config['file_name'] = 'logo';
+		$config['overwrite'] = 'true';
 		
 		$this->upload->initialize($config);
 
