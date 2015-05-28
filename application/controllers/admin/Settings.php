@@ -76,7 +76,7 @@ class Settings extends TCMS_controller{
 
 		if ( ! $this->upload->do_upload())
 		{
-			$data['error'] = $this->upload->display_errors();
+			$data['error'] = $this->upload->display_errors("<p class='alert alert-dismissable alert-danger'>", "</p>");
 			$data['main_content'] = 'admin/settings/upload';
 			$this->load->view('admin/layouts/main',$data);
 		}
