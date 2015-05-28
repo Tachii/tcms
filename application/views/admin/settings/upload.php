@@ -1,3 +1,26 @@
+<!-- Display Validation errors -->
+<?php echo validation_errors('<p class="alert alert-dismissable alert-danger">'); ?>
+<form method="post" action="<?php echo base_url() ?>admin/settings/edit/<?php echo $setting->id ?>"?>
+	<div class="row">	
+	  <div class="col-md-6">
+	  	<h1 class="sub-header">Upload Logo</h1>
+	  </div>
+	</div>
+			<ol class="breadcrumb">
+				<li>
+					<a href="<?php echo base_url();?>admin/dashboard">
+						Dashboard
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo base_url();?>admin/settings">
+						Settings
+					</a>
+				</li>
+				<li>
+					Upload Logo 
+				</li>
+			</ol>
 <?php echo $error;?>
 
 <?php echo form_open_multipart('upload/do_upload');?>
