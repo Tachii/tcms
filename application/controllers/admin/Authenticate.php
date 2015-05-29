@@ -26,7 +26,7 @@ class Authenticate extends TCMS_Controller{
 				$this->session->set_userdata($user_data);
 				
 				
-			var_dump($user);
+			var_dump($user_data);
 			die();
 				
 				//Set message 
