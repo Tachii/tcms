@@ -42,6 +42,14 @@
 				);
 				echo form_input($data);
     		?>
+    		<?php 
+    			$data = array(
+					'name' => 'password',
+					'class' => 'form-control',
+					'placeholder' => 'Password'
+				);
+				echo form_password($data);
+    		?>
     		
     		<?php 
     			$data = array(
