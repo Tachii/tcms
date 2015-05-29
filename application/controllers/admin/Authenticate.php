@@ -5,7 +5,7 @@ class Authenticate extends TCMS_Controller{
 		$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
 		$this->form_validation->set_rules('password','Username','trim|required|min_length[4]|xss_clean');
 		
-		if($this->form_validation->run() == FALSE && $this->input->post('submit') == FALSE) {
+		if($this->form_validation->run() == FALSE) {
 		
 			//Loading View
 			$this->load->view('admin/layouts/login');
@@ -39,7 +39,6 @@ class Authenticate extends TCMS_Controller{
 		$this->session->unset_userdata('user_id');
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('logged_in');
-		$this->session->sess_destroy();
 		
 		$this->load->view('admin/layouts/login');
 	}
