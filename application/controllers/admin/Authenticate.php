@@ -9,8 +9,7 @@ class Authenticate extends TCMS_Controller{
 		
 			//Loading View
 			$this->load->view('admin/layouts/login');
-		
-		} else {
+			
 		
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
@@ -28,6 +27,8 @@ class Authenticate extends TCMS_Controller{
 				//Set session userdata
 				$this->session->set_userdata($user_data);
 				
+		
+		} else {
 				//Set message
 				$this->session->set_flashdata('pass_login', 'You are now logged in');
 				$this->load->view('admin/dashboard');
