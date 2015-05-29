@@ -40,6 +40,6 @@ class Authenticate extends TCMS_Controller{
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('logged_in');
 		
-		redirect('admin/login');
+		redirect('admin/authenticate/login');
 	}
 }
