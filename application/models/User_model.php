@@ -82,5 +82,18 @@ class User_model extends CI_Model {
 			return false;
 		}
 	}
+	
+	/**
+	 * Check for unique user email
+	 * @param - id(int)
+	 * @param - email(string)
+	 */
+	function check_unique_user_email($id = '', $email) {
+        $this->db->where('email', $email);
+        if($id) {
+            $this->db->where_not_in('id', $id);
+        }
+        return $this->db->get('user')->num_rows();
+    }
 }
 ?>
