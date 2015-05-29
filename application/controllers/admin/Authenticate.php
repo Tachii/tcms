@@ -5,7 +5,7 @@ class Authenticate extends TCMS_Controller{
 		$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
 		$this->form_validation->set_rules('password','Username','trim|required|min_length[4]|xss_clean');
 		
-		if($this->form_validation->run() == FALSE) {
+		if($this->form_validation->run() == FALSE && isset($this->input->post('submit'))) {
 		
 			//Loading View
 			$this->load->view('admin/layouts/login');

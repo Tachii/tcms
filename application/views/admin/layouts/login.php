@@ -56,9 +56,10 @@
 					'class' => 'btn btn-lg btn-primary btn-block',
 					'content' => 'login',
 					'placeholder' => 'Password',
-					'type' => 'submit'
+					'type' => 'submit',
+					'name' => 'submit'
 				);
-				echo form_button($data);
+				echo form_input($data);
     		?>
     	<?php echo form_close();?>
     </div> <!-- /container -->
