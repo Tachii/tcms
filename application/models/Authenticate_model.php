@@ -6,21 +6,15 @@ class Authenticate_model extends CI_Model {
 	 * @param - username(string)
 	 * @param - password(string)
 	 */
-	public function login($username,$password){
+	public function login($username){
 		//Secure Password
-		$password = $this->encrypt->encode($password);
+		//$password = $this->encrypt->encode($password);
 		
 		//Validate
 		$this->db->where('username',$username);
-		
 		$result = $this->db->get('users');
-		
-		if($result->num_rows() == 1){
-			$user = $result->row();
-			return $user;	
-		} else {
-			return false;
-		}
+		$user = $query->row();
+		return $user;
 	}
 }
 ?>
