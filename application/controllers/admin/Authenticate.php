@@ -26,12 +26,12 @@ class Authenticate extends TCMS_Controller{
 				
 					//Set session userdata
 					$this->session->set_userdata($user_data);
-				} else {
-						//Set message
-						$this->session->set_flashdata('pass_login', 'You are now logged in');
-						redirect('admin/dashboard');
 				}
-			}
+			} 
+		} else {
+				//Set message
+				$this->session->set_flashdata('pass_login', 'You are now logged in');
+				redirect('admin/dashboard');
 		}
 	}
 	
