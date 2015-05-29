@@ -37,7 +37,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="<?php echo base_url(); ?>" target="_blank">View Site</a></li>
             <li><a href="<?php echo base_url(); ?>admin/dashboard">Dashboard</a></li>
-            <li><a href="<?php echo base_url(); ?>admin/users/logout">Logout</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/authenticate/logout">Logout</a></li>
           </ul>
           
 		<!-- CodeIgniter Form Helper. Searchbox -->
