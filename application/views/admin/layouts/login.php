@@ -17,6 +17,9 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url() ?>assets/css/jumbotron-narrow.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>assets/css/dashboard.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/css/signin.css" rel="stylesheet">
+    
+    
     
   </head>
 
