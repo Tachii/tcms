@@ -15,8 +15,6 @@ class Authenticate extends TCMS_Controller{
 			$password = $this->input->post('password');
 			
 			$user = $this->Authenticate_model->login($username,$password);
-			var_dump($user);
-			die();
 			//Validate Username & Password
 			if(!empty($user)){
 				$user_data = array(
@@ -26,6 +24,10 @@ class Authenticate extends TCMS_Controller{
 				);
 				//Set session userdata
 				$this->session->set_userdata($user_data);
+				
+				
+			var_dump($user);
+			die();
 				
 				//Set message 
 				$this->session->set_flashdata('pass_login','You are now logged in');
