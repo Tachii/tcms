@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Authenticate extends TCMS_Controller{
+class Authenticate extends CI_Controller{
 		
 	public function login(){
 		$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
