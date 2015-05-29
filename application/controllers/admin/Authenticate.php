@@ -28,7 +28,7 @@ class Authenticate extends TCMS_Controller{
 				
 				//Set message 
 				$this->session->set_flashdata('pass_login','You are now logged in');
-				//redirect('admin/dashboard');
+				$this->load->view('admin/dashboard');
 			}
 		}
 		
