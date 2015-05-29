@@ -1,5 +1,5 @@
 <?php 
-class Authenticate extends MY_Controller{
+class Authenticate extends TCMS_Controller{
 	public function login(){
 		$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
 		$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|xss_clean');
