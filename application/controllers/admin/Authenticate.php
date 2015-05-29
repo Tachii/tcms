@@ -12,7 +12,7 @@ class Authenticate extends TCMS_Controller{
 			$password = $this->input->post('password');
 			
 			//Validate Username & Password
-			$user_id = $this->Authenticate_model->login_user($username, $password);
+			$user_id = $this->Authenticate_model->login($username, $password);
 			
 			if($user_id){
 				$user_data = array(
