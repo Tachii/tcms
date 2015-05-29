@@ -54,12 +54,10 @@
     		<?php 
     			$data = array(
 					'class' => 'btn btn-lg btn-primary btn-block',
-					'content' => 'login',
-					'placeholder' => 'Password',
-					'type' => 'submit',
-					'name' => 'submit'
+					'content' => 'Login',
+					'type' => 'submit'
 				);
-				echo form_input($data);
+				echo form_button($data);
     		?>
     	<?php echo form_close();?>
     </div> <!-- /container -->
