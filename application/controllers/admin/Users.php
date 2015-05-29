@@ -77,26 +77,13 @@ class Users extends TCMS_Controller {
 		//Validation Rules
 		$this->form_validation->set_rules('firstname', 'First Name', 'required|min_length[2]|max_length[15]');
 		$this->form_validation->set_rules('lastname', 'Last Name', 'required|min_length[2]|max_length[15]');
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_check_user_email');
-		$this->form_validation->set_rules('username', 'Username', 'required|min_length[4]|max_length[12]|is_unique[users.username]');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+		$this->form_validation->set_rules('username', 'Username', 'required|min_length[4]|max_length[12]');
 		$this->form_validation->set_rules('password1', 'Password', 'required|matches[password2]');
 		$this->form_validation->set_rules('password2', 'Password Confirmation', 'required');
 		$this->form_validation->set_rules('group', 'User Group', 'required');
 		
-		function check_user_email($email) {        
-		    if($this->input->post('id'))
-		        $id = $this->input->post('id');
-		    else
-		        $id = '';
-		    $result = $this->User_model->check_unique_user_email($id, $email);
-		    if($result == 0)
-		        $response = true;
-		    else {
-		        $this->form_validation->set_message('check_user_email', 'Email must be unique');
-		        $response = false;
-		    }
-		    return $response;
-		}
+		
 		
 		//Load View
 		$data['groups'] = $this->Group_model->get_groups();
