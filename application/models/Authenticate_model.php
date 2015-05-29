@@ -13,7 +13,7 @@ class Authenticate_model extends CI_Model {
 		//Validate
 		$this->db->where('username',$username);
 		$result = $this->db->get('users');
-		$user = $query->row();
+		$user = $result->row();
 		return $user;
 	}
 }
