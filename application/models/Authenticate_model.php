@@ -8,7 +8,7 @@ class Authenticate_model extends CI_Model {
 	 */
 	public function login($username,$password){
 		//Secure Password
-		$password = md5($password);
+		$password = $this->encrypt->encode($password);
 		
 		//Validate
 		$this->db->where('username',$username);
@@ -18,9 +18,9 @@ class Authenticate_model extends CI_Model {
 		
 		if($result->num_rows() == 1){
 			$user = $result->row();
-			return 'something';	
+			return $user;	
 		} else {
-			return 'nothing';
+			return false;
 		}
 	}
 }
