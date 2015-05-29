@@ -31,7 +31,7 @@
 				'class' => 'form-signin'
 			);
     	?>
-    	<?php echo form_open('admin/authenticate/login',$attribtes);?>
+    	<?php echo form_open('admin/authenticate/login',$attributes);?>
     		<h2 class ="form-signin-heading">TCMS Authorization</h2>
     		<?php echo validation_errors('<p class="alert alert-dismissable alert-danger"'); ?>
     		<?php 
