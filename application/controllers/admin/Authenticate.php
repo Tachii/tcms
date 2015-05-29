@@ -17,19 +17,18 @@ class Authenticate extends TCMS_Controller{
 			//Validate Username & Password
 			$user= $this->Authenticate_model->login($username,$password);
 			
-			if($user){
-				$user_data = array(
-					'user_id' => $user->id,
-					'username' => $username,
-					'logged_in' => true
-				);
-				//Set session userdata
-				$this->session->set_userdata($user_data);
+			$user_data = array(
+				'user_id' => $user->id,
+				'username' => $username,
+				'logged_in' => true
+			);
+			//Set session userdata
+			$this->session->set_userdata($user_data);
+			
+			//Set message 
+			$this->session->set_flashdata('pass_login','You are now logged in');
+			redirect('admin/dashboard');
 				
-				//Set message 
-				$this->session->set_flashdata('pass_login','You are now logged in');
-				redirect('admin/dashboard');
-			}
 		}
 		
 	}
