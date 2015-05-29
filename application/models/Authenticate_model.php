@@ -17,9 +17,10 @@ class Authenticate_model extends CI_Model {
 		$result = $this->db->get('users');
 		
 		if($result->num_rows() == 1){
-			return $result->row();	
+			$user = $result->row();
+			return 'something';	
 		} else {
-			return false;
+			return 'nothing';
 		}
 	}
 }
