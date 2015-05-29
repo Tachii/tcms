@@ -36,7 +36,7 @@
     		<?php echo validation_errors('<p class="alert alert-dismissable alert-danger" />'); ?>
     		<?php 
     			$data = array(
-    				'name' => 'password',
+    				'name' => 'username',
 					'class' => 'form-control',
 					'placeholder' => 'Username'
 				);
