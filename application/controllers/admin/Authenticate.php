@@ -15,7 +15,7 @@ class Authenticate extends TCMS_Controller{
 			$password = $this->input->post('password');
 			
 			//Validate Username & Password
-			$user=$this->Authenticate_model->login($username,$password);
+			$user= $this->Authenticate_model->login($username,$password);
 			
 			if($user){
 				$user_data = array(
@@ -28,7 +28,7 @@ class Authenticate extends TCMS_Controller{
 				
 				//Set message 
 				$this->session->set_flashdata('pass_login','You are now logged in');
-				$this->load->view('admin/dashboard');
+				redirect('admin/dashboard');
 			}
 		}
 		
@@ -41,6 +41,6 @@ class Authenticate extends TCMS_Controller{
 		$this->session->unset_userdata('logged_in');
 		$this->session->sess_destroy();
 		
-		//redirect('admin/authenticate/login');
+		redirect('admin/authenticate/login');
 	}
 }
