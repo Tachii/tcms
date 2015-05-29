@@ -37,7 +37,7 @@
     		<?php 
     			$data = array(
     				'name' => 'password',
-					'class' => 'form_control',
+					'class' => 'form-control',
 					'placeholder' => 'Username'
 				);
 				echo form_input($data);
