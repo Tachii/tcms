@@ -36,4 +36,14 @@ class Authenticate extends TCMS_Controller{
 			}
 		}
 	}
+	
+	public function logout(){
+		//Unset User Data
+		$this->session->unset_userdata('logged_in');
+		$this->session->unset_userdata('user_id');
+		$this->session->unset_userdata('username');
+		$this->session->sess_destroy();
+		
+		redirect('admin/authenticate/login');
+	}
 }

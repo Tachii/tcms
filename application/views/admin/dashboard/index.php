@@ -1,3 +1,9 @@
+<!-- Display Notification Message -->
+<?php
+	if($this->session->flashdata('pass_login')){
+		echo ('<p class="alert alert-success">'.$this->session->flashdata('pass_login')."</p>");
+	}
+?>         
           <h1 class="page-header">Dashboard</h1>
 
           <h2 class="sub-header">Latest Articles</h2>
