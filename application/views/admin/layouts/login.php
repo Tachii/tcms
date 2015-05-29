@@ -26,18 +26,41 @@
   <body>
 
     <div class="container">
-
-      <form class="form-signin">
-        <h2 class="form-signin-heading">TCMS Authorization</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="text" class="form-control" placeholder="Username" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
-
+    	<?php 
+    		$attributes = array(
+				'class' => 'form-signin'
+			);
+    	?>
+    	<?php echo form_open('admin/authenticate/login',$attribtes);?>
+    		<h2 class ="form-signin-heading">TCMS Authorization</h2>
+    		<?php echo validation_errors('<p class="alert alert-dismissable alert-danger"'); ?>
+    		<?php 
+    			$data = array(
+    				'name' => 'password',
+					'class' => 'form_control',
+					'placeholder' => 'Username'
+				);
+				echo form_input($data);
+    		?>
+    		<?php 
+    			$data = array(
+					'name' => 'password',
+					'class' => 'form-control',
+					'placeholder' => 'Password'
+				);
+				echo form_password($data);
+    		?>
+    		
+    		<?php 
+    			$data = array(
+					'class' => 'btn btn-lg btn-primary btn-block',
+					'content' => 'login',
+					'placeholder' => 'Password',
+					'type' => 'submit'
+				);
+				echo form_button($data);
+    		?>
+    	<?php echo form_close();?>
     </div> <!-- /container -->
 
   </body>
