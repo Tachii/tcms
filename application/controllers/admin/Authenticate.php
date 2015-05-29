@@ -31,7 +31,7 @@ class Authenticate extends TCMS_Controller{
 		} else {
 				//Set message
 				$this->session->set_flashdata('pass_login', 'You are now logged in');
-				$this->load->view('admin/dashboard');
+				redirect('admin/dashboard');
 		
 			}
 		}
