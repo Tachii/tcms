@@ -81,7 +81,7 @@ class Users extends TCMS_Controller {
 		if($result == 0){
 			return true;
 		} else {
-			$this->form_validation->set_message('email_check', 'Email %s is already in use');
+			$this->form_validation->set_message('email_check', 'Such %s is already in use');
 			return false;
 		}	
 	}
