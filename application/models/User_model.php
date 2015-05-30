@@ -49,11 +49,9 @@ class User_model extends CI_Model {
 	 * @param - id(int)
 	 * @param - email(string)
 	 */
-	public function check_unique_email($id='',$email){
+	public function check_unique_email($id,$email){
 		$this->db->where('email', $email);
-		if($id) {
-            $this->db->where_not_in('id', $id);
-        }
+        $this->db->where_not_in('id', $id);
         return $this->db->get('users')->num_rows();
 	}
 	
@@ -63,11 +61,9 @@ class User_model extends CI_Model {
 	 * @param - id(int)
 	 * @param - username(string)
 	 */
-	public function check_unique_username($id='',$username){
+	public function check_unique_username($id,$username){
 		$this->db->where('username', $username);
-		if($id) {
-            $this->db->where_not_in('id', $id);
-        }
+		$this->db->where_not_in('id', $id);
         return $this->db->get('users')->num_rows();
 	}
 	
