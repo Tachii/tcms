@@ -116,7 +116,7 @@ class Users extends TCMS_Controller {
 		$this->form_validation->set_rules('firstname', 'First Name', 'required|min_length[2]|max_length[15]');
 		$this->form_validation->set_rules('lastname', 'Last Name', 'required|min_length[2]|max_length[15]');
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_email_check');
-		$this->form_validation->set_rules('username', 'Username', 'required|min_length[4]|max_length[12]||callback_username_check');
+		$this->form_validation->set_rules('username', 'Username', 'required|min_length[4]|max_length[12]|callback_username_check');
 		$this->form_validation->set_rules('password1', 'Password', 'required|matches[password2]');
 		$this->form_validation->set_rules('password2', 'Password Confirmation', 'required');
 		$this->form_validation->set_rules('group', 'User Group', 'required');
