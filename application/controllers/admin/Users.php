@@ -78,7 +78,7 @@ class Users extends TCMS_Controller {
     	else
         	$id = '';
 		$result = $this->User_model->check_unique_email($id, $email);
-		if($result == 0){
+		if($result <= 1){
 			return true;
 		} else {
 			$this->form_validation->set_message('email_check', 'Such %s is already in use');
@@ -97,7 +97,7 @@ class Users extends TCMS_Controller {
     	else
         	$id = '';
 		$result = $this->User_model->check_unique_username($id, $username);
-		if($result == 0){
+		if($result <= 1){
 			return true;
 		} else {
 			$this->form_validation->set_message('username_check', 'Username is already in use');
