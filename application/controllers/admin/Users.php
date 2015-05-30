@@ -77,6 +77,7 @@ class Users extends TCMS_Controller {
         	$id = $this->input->post('id');
     	else
         	$id = '';
+		die(var_dump($id));
 		$result = $this->User_model->check_unique_email($id, $email);
 		if($result == 0){
 			return true;
@@ -96,6 +97,8 @@ class Users extends TCMS_Controller {
         	$id = $this->input->post('id');
     	else
         	$id = '';
+		
+		die(var_dump($id));
 		$result = $this->User_model->check_unique_username($id, $username);
 		if($result == 0){
 			return true;
