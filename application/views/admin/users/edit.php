@@ -6,7 +6,7 @@
       	<h1 class="sub-header">Edit User</h1>
       </div>
 	</div>
-		<div class="col-lg-12">
+		<div class="col-lg-12" style="padding-left: 0px;">
 			<ol class="breadcrumb">
 				<li>
 					<a href="<?php echo base_url() ?>admin/dashboard">
