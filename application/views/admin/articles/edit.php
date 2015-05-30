@@ -6,6 +6,7 @@
 	  	<h1 class="sub-header">Add Article</h1>
 	  </div>
 	</div>
+		<div class="col-lg-12">
 			<ol class="breadcrumb">
 				<li>
 					<a href="<?php echo base_url();?>admin/dashboard">
@@ -21,6 +22,7 @@
 					Edit Article
 				</li>
 			</ol>
+		</div>
 			
 			<div class="form-group">
 				<label>Article Title</label>
