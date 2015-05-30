@@ -29,7 +29,9 @@
 				<input type="text" class="form-control" name="firstname" value="<?php echo $user->first_name; ?>"/>
 			</div>
 			
-			<input type="hidden" class="form-control" name="id" value="<?php echo $user->id; ?>"/>
+			<div class="form-group">
+				<input type="hidden" class="form-control" name="id" value="<?php echo $user->id; ?>"/>
+			</div>
 			
 			<div class="form-group">
 				<label>Last Name</label>
