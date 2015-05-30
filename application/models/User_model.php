@@ -45,6 +45,19 @@ class User_model extends CI_Model {
 	}
 	
 	/**
+	 * Check unique username
+	 * @param - id(int)
+	 * @param - email(string)
+	 */
+	public function check_unique_email($id='',$email){
+		$this->db->where('email', $email);
+		if($id) {
+            $this->db->where_not_in('id', $id);
+        }
+        return $this->db->get('users')->num_rows();
+	}
+	
+	/**
 	 * Insert User
 	 * @param - data(array)
 	 */
