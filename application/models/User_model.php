@@ -63,7 +63,7 @@ class User_model extends CI_Model {
 	 * @param - id(int)
 	 * @param - username(string)
 	 */
-	public function check_unique_email($id='',$username){
+	public function check_unique_username($id='',$username){
 		$this->db->where('username', $username);
 		if($id) {
             $this->db->where_not_in('id', $id);
