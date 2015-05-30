@@ -23,40 +23,48 @@
 				</li>
 			</ol>
 		</div>
-		<div class="form-group">
 			
-			<label>First Name</label>
-			<input type="text" class="form-control" name="firstname" value="<?php echo $user->first_name; ?>"/>
+			<div class="form-group">
+				<label>First Name</label>
+				<input type="text" class="form-control" name="firstname" value="<?php echo $user->first_name; ?>"/>
+			</div>
 			
-			<br />
-			<label>Last Name</label>
-			<input type="text" class="form-control" name="lastname" value="<?php echo $user->last_name; ?>"/>
+			<input type="hidden" class="form-control" name="id" value="<?php echo $user->id; ?>"/>
 			
-			<br />
-			<label>Email</label>
-			<input type="email" class="form-control" name="email" value="<?php echo $user->email; ?>"/>
+			<div class="form-group">
+				<label>Last Name</label>
+				<input type="text" class="form-control" name="lastname" value="<?php echo $user->last_name; ?>"/>
+			</div>
 			
-			<br />
-			<label>Username</label>
-			<input type="text" class="form-control" name="username" value="<?php echo $user->username; ?>"/>
+			<div class="form-group">
+				<label>Email</label>
+				<input type="email" class="form-control" name="email" value="<?php echo $user->email; ?>"/>
+			</div>
 			
-			<br />
-			<label>Password</label>
-			<input type="password" class="form-control" name="password1" value="<?php echo $user->email;?>"/>
+			<div class="form-group">
+				<label>Username</label>
+				<input type="text" class="form-control" name="username" value="<?php echo $user->username; ?>"/>
+			</div>
 			
-			<br />
-			<label>Repeat Password</label>
-			<input type="password" class="form-control" name="password2" value="<?php echo $user->email;?>"/>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="form-control" name="password1" value="<?php echo $user->email;?>"/>
+			</div>
 			
-			<br />
-			<label>User Group</label>
-			<select name="group" class="form-control ">
-				<?php foreach($groups as $group) : ?>
-					<option <?php if($group->id == $user->group_id) echo 'selected'; ?> value="<?php echo $group->id; ?>"><?php echo $group->name ?></option>
-				<?php endforeach; ?>
-			</select>
+			<div class="form-group">
+				<label>Repeat Password</label>
+				<input type="password" class="form-control" name="password2" value="<?php echo $user->email;?>"/>
+			</div>
 			
-		</div>
+			<div class="form-group">
+				<label>User Group</label>
+				<select name="group" class="form-control ">
+					<?php foreach($groups as $group) : ?>
+						<option <?php if($group->id == $user->group_id) echo 'selected'; ?> value="<?php echo $group->id; ?>"><?php echo $group->name ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
+			
       	<div class="btn-group pull-left">
       		<input type="submit" name="submit" id="page_submit" class="btn btn-primary" value="Save" />
       		<a href="#" class="btn btn-default">Close</a>
