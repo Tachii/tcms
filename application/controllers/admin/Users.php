@@ -100,7 +100,7 @@ class Users extends TCMS_Controller {
 		if($result == 0){
 			return true;
 		} else {
-			$this->form_validation->set_message('username_check', 'Username $username is already in use');
+			$this->form_validation->set_message('username_check', 'Username is already in use');
 			return false;
 		}	
 	}
