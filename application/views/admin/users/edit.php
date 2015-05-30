@@ -28,8 +28,6 @@
 			<label>First Name</label>
 			<input type="text" class="form-control" name="firstname" value="<?php echo $user->first_name; ?>"/>
 			
-			<input type="hidden" class="form-control" name="id" value="<?php echo $user->id; ?>"/>
-			
 			<br />
 			<label>Last Name</label>
 			<input type="text" class="form-control" name="lastname" value="<?php echo $user->last_name; ?>"/>
